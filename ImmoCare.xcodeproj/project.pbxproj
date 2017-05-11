@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EC1EC30B14006281BA /* AppDelegate.swift */; };
+		C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EE1EC30B14006281BA /* ViewController.swift */; };
+		C61F16F21EC30B14006281BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61F16F01EC30B14006281BA /* Main.storyboard */; };
+		C61F16F41EC30B14006281BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61F16F31EC30B14006281BA /* Assets.xcassets */; };
+		C61F16F71EC30B14006281BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */; };
+		C61F17021EC30B15006281BA /* ImmoCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F17011EC30B15006281BA /* ImmoCareTests.swift */; };
+		C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */; };
+		C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171A1EC31A43006281BA /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C61F16FE1EC30B15006281BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C61F16E11EC30B14006281BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C61F16E81EC30B14006281BA;
+			remoteInfo = ImmoCare;
+		};
+		C61F17091EC30B15006281BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C61F16E11EC30B14006281BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C61F16E81EC30B14006281BA;
+			remoteInfo = ImmoCare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C61F16E91EC30B14006281BA /* ImmoCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmoCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61F16EC1EC30B14006281BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C61F16EE1EC30B14006281BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C61F16F11EC30B14006281BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C61F16F31EC30B14006281BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C61F16F61EC30B14006281BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C61F16F81EC30B14006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61F16FD1EC30B15006281BA /* ImmoCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImmoCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61F17011EC30B15006281BA /* ImmoCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmoCareTests.swift; sourceTree = "<group>"; };
+		C61F17031EC30B15006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61F17081EC30B15006281BA /* ImmoCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImmoCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmoCareUITests.swift; sourceTree = "<group>"; };
+		C61F170E1EC30B15006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61F171A1EC31A43006281BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C61F16E61EC30B14006281BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F16FA1EC30B15006281BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F17051EC30B15006281BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C61F16E01EC30B14006281BA = {
+			isa = PBXGroup;
+			children = (
+				C61F16EB1EC30B14006281BA /* ImmoCare */,
+				C61F17001EC30B15006281BA /* ImmoCareTests */,
+				C61F170B1EC30B15006281BA /* ImmoCareUITests */,
+				C61F16EA1EC30B14006281BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C61F16EA1EC30B14006281BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C61F16E91EC30B14006281BA /* ImmoCare.app */,
+				C61F16FD1EC30B15006281BA /* ImmoCareTests.xctest */,
+				C61F17081EC30B15006281BA /* ImmoCareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C61F16EB1EC30B14006281BA /* ImmoCare */ = {
+			isa = PBXGroup;
+			children = (
+				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
+				C61F16EE1EC30B14006281BA /* ViewController.swift */,
+				C61F171A1EC31A43006281BA /* LoginViewController.swift */,
+				C61F16F01EC30B14006281BA /* Main.storyboard */,
+				C61F16F31EC30B14006281BA /* Assets.xcassets */,
+				C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */,
+				C61F16F81EC30B14006281BA /* Info.plist */,
+			);
+			path = ImmoCare;
+			sourceTree = "<group>";
+		};
+		C61F17001EC30B15006281BA /* ImmoCareTests */ = {
+			isa = PBXGroup;
+			children = (
+				C61F17011EC30B15006281BA /* ImmoCareTests.swift */,
+				C61F17031EC30B15006281BA /* Info.plist */,
+			);
+			path = ImmoCareTests;
+			sourceTree = "<group>";
+		};
+		C61F170B1EC30B15006281BA /* ImmoCareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */,
+				C61F170E1EC30B15006281BA /* Info.plist */,
+			);
+			path = ImmoCareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C61F16E81EC30B14006281BA /* ImmoCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C61F17111EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCare" */;
+			buildPhases = (
+				C61F16E51EC30B14006281BA /* Sources */,
+				C61F16E61EC30B14006281BA /* Frameworks */,
+				C61F16E71EC30B14006281BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImmoCare;
+			productName = ImmoCare;
+			productReference = C61F16E91EC30B14006281BA /* ImmoCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C61F16FC1EC30B15006281BA /* ImmoCareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C61F17141EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareTests" */;
+			buildPhases = (
+				C61F16F91EC30B15006281BA /* Sources */,
+				C61F16FA1EC30B15006281BA /* Frameworks */,
+				C61F16FB1EC30B15006281BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C61F16FF1EC30B15006281BA /* PBXTargetDependency */,
+			);
+			name = ImmoCareTests;
+			productName = ImmoCareTests;
+			productReference = C61F16FD1EC30B15006281BA /* ImmoCareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C61F17071EC30B15006281BA /* ImmoCareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C61F17171EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareUITests" */;
+			buildPhases = (
+				C61F17041EC30B15006281BA /* Sources */,
+				C61F17051EC30B15006281BA /* Frameworks */,
+				C61F17061EC30B15006281BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C61F170A1EC30B15006281BA /* PBXTargetDependency */,
+			);
+			name = ImmoCareUITests;
+			productName = ImmoCareUITests;
+			productReference = C61F17081EC30B15006281BA /* ImmoCareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C61F16E11EC30B14006281BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ImmoCare;
+				TargetAttributes = {
+					C61F16E81EC30B14006281BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					C61F16FC1EC30B15006281BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C61F16E81EC30B14006281BA;
+					};
+					C61F17071EC30B15006281BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C61F16E81EC30B14006281BA;
+					};
+				};
+			};
+			buildConfigurationList = C61F16E41EC30B14006281BA /* Build configuration list for PBXProject "ImmoCare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C61F16E01EC30B14006281BA;
+			productRefGroup = C61F16EA1EC30B14006281BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C61F16E81EC30B14006281BA /* ImmoCare */,
+				C61F16FC1EC30B15006281BA /* ImmoCareTests */,
+				C61F17071EC30B15006281BA /* ImmoCareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C61F16E71EC30B14006281BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61F16F71EC30B14006281BA /* LaunchScreen.storyboard in Resources */,
+				C61F16F41EC30B14006281BA /* Assets.xcassets in Resources */,
+				C61F16F21EC30B14006281BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F16FB1EC30B15006281BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F17061EC30B15006281BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C61F16E51EC30B14006281BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
+				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
+				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F16F91EC30B15006281BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61F17021EC30B15006281BA /* ImmoCareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F17041EC30B15006281BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C61F16FF1EC30B15006281BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C61F16E81EC30B14006281BA /* ImmoCare */;
+			targetProxy = C61F16FE1EC30B15006281BA /* PBXContainerItemProxy */;
+		};
+		C61F170A1EC30B15006281BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C61F16E81EC30B14006281BA /* ImmoCare */;
+			targetProxy = C61F17091EC30B15006281BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C61F16F01EC30B14006281BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C61F16F11EC30B14006281BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C61F16F61EC30B14006281BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C61F170F1EC30B15006281BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C61F17101EC30B15006281BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C61F17121EC30B15006281BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ImmoCare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C61F17131EC30B15006281BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ImmoCare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C61F17151EC30B15006281BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ImmoCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImmoCare.app/ImmoCare";
+			};
+			name = Debug;
+		};
+		C61F17161EC30B15006281BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ImmoCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImmoCare.app/ImmoCare";
+			};
+			name = Release;
+		};
+		C61F17181EC30B15006281BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ImmoCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ImmoCare;
+			};
+			name = Debug;
+		};
+		C61F17191EC30B15006281BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ImmoCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ImmoCare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C61F16E41EC30B14006281BA /* Build configuration list for PBXProject "ImmoCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61F170F1EC30B15006281BA /* Debug */,
+				C61F17101EC30B15006281BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C61F17111EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61F17121EC30B15006281BA /* Debug */,
+				C61F17131EC30B15006281BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C61F17141EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61F17151EC30B15006281BA /* Debug */,
+				C61F17161EC30B15006281BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C61F17171EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61F17181EC30B15006281BA /* Debug */,
+				C61F17191EC30B15006281BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C61F16E11EC30B14006281BA /* Project object */;
+}
