@@ -15,6 +15,7 @@
 		C61F17021EC30B15006281BA /* ImmoCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F17011EC30B15006281BA /* ImmoCareTests.swift */; };
 		C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */; };
 		C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171A1EC31A43006281BA /* LoginViewController.swift */; };
+		C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171C1EC4B62B006281BA /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmoCareUITests.swift; sourceTree = "<group>"; };
 		C61F170E1EC30B15006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61F171A1EC31A43006281BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C61F171C1EC4B62B006281BA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
 				C61F16EE1EC30B14006281BA /* ViewController.swift */,
 				C61F171A1EC31A43006281BA /* LoginViewController.swift */,
+				C61F171C1EC4B62B006281BA /* RegisterViewController.swift */,
 				C61F16F01EC30B14006281BA /* Main.storyboard */,
 				C61F16F31EC30B14006281BA /* Assets.xcassets */,
 				C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
 				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
 				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
+				C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +515,7 @@
 				C61F17131EC30B15006281BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C61F17141EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +524,7 @@
 				C61F17161EC30B15006281BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C61F17171EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +533,7 @@
 				C61F17191EC30B15006281BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

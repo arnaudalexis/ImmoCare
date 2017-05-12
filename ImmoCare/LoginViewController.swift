@@ -33,14 +33,15 @@ class LoginViewController: UIViewController {
     lazy var password: MyTextField = {
         let pwd = MyTextField(frame:CGRect(x:10, y:160, width:280, height:40))
         pwd.backgroundColor = .white
-        pwd.placeholder = "Password"
+        pwd.placeholder = "Mot de passe"
+        pwd.keyboardType = .default
         pwd.font = UIFont.systemFont(ofSize:14)
         pwd.leftViewMode = .always
         pwd.leftView = self.getLeftView(image: #imageLiteral(resourceName: "pwdIcon"))
         return pwd
     }()
     
-    // set left container for pwd and username 
+    // set left container for pwd and username
     func getLeftView(image:UIImage) -> UIView
     {
         let leftV = UIView(frame:CGRect(x:0, y:0, width:40, height:40))
@@ -86,14 +87,14 @@ class LoginViewController: UIViewController {
         let btnForgotPwd = UIButton(frame:CGRect(x:10, y:260, width:150, height:40))
         btnForgotPwd.setTitle("Forget Password", for: .normal)
         btnForgotPwd.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btnForgotPwd.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .normal)
+        btnForgotPwd.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .highlighted)
         self.container.addSubview(btnForgotPwd)
         
         // set btn register
         let btnRegister = UIButton(frame:CGRect(x:210, y:260, width:90, height:40))
         btnRegister.setTitle("Register", for: .normal)
         btnRegister.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btnRegister.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .normal)
+        btnRegister.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .highlighted)
         btnRegister.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
         self.container.addSubview(btnRegister)
         
@@ -116,6 +117,6 @@ class LoginViewController: UIViewController {
     
     func registerAction()
     {
-        
+        self.present(RegisterViewController(), animated: true, completion: nil)
     }
 }
