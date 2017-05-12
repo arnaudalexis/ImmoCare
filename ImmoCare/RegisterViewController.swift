@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
     // container register
     var container: UIView = {
-        let my_view = UIView(frame:CGRect(x:0, y:0, width:300, height:350))
+        let my_view = UIView(frame:CGRect(x:0, y:0, width:300, height:420))
         my_view.backgroundColor = UIColor(red:0.16, green:0.34, blue:0.56, alpha: 1.0)
         return my_view
     }()
@@ -109,6 +109,22 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
         pickerView.dataSource = self
         contentPicker.inputView = pickerView
         
+        // set button register
+        let btnRegister = UIButton(frame:CGRect(x:10, y:340, width:280, height:40))
+        btnRegister.setBackgroundImage(UIImage(color:UIColor(red:0.27, green:0.83, blue:0.76, alpha: 1.0)), for: .normal)
+        btnRegister.setTitle("Register", for: .normal)
+        btnRegister.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btnRegister.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
+        self.container.addSubview(btnRegister)
+        
+        // set button login
+        let btnLogin = UIButton(frame:CGRect(x:230, y:380, width:70, height:40))
+        btnLogin.setTitle("Login", for: .normal)
+        btnLogin.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btnLogin.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .highlighted)
+        btnLogin.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
+        self.container.addSubview(btnLogin)
+        
         // set position container on center
         self.container.center = self.view.center
     }
@@ -136,5 +152,54 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func registerAction()
+    {
+        if(userName.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre nom.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(email.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(password.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre mot de passe.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(contentPicker.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre rôle.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else{
+            let alertController = UIAlertController(title: "Super!", message: "Vous pouvez désomais vous connecter", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+            self.present(LoginViewController(), animated: true, completion: nil)
+        }
+        
+    }
+    
+    func loginAction()
+    {
+        self.present(LoginViewController(), animated: true, completion: nil)
     }
 }

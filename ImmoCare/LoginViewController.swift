@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     // container login
     var container: UIView = {
         let my_view = UIView(frame:CGRect(x:0, y:0, width:300, height:300))
-        my_view.backgroundColor = UIColor(red:0.26, green:0.72, blue:0.72, alpha: 1.0)
+        my_view.backgroundColor = UIColor(red:0.16, green:0.34, blue:0.56, alpha: 1.0)
         return my_view
     }()
     
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // set color background
-        self.view.backgroundColor = UIColor(red:0.75, green:0.73, blue:0.79, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red:0.49, green:0.73, blue:0.71, alpha: 1.0)
         
         // set container
         self.view.addSubview(self.container)
@@ -101,14 +101,15 @@ class LoginViewController: UIViewController {
         // set position container on center
         self.container.center = self.view.center
         
+        //show keyboard
+        self.email.becomeFirstResponder()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     func loginAction()
     {
