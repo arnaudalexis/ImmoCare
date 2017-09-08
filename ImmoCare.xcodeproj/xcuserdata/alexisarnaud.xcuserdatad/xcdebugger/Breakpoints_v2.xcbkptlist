@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImmoCare/RestApiManager.swift"
+            timestampString = "526529186.067298"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "loginUser(_email:_password:onSuccess:onFailure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImmoCare/RestApiManager.swift"
+            timestampString = "526529186.067298"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "loginUser(_email:_password:onSuccess:onFailure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImmoCare/ListAdvertsViewCtrl.swift"
+            timestampString = "526526538.749517"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ListAdvertsViewCtrl"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.__deallocating_deinit"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.244533"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.init (style : __C.UITableViewStyle) -&gt; ImmoCare.ListAdvertsViewCtrl"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.246114"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.__allocating_init (style : __C.UITableViewStyle) -&gt; ImmoCare.ListAdvertsViewCtrl"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.247777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ImmoCare.ListAdvertsViewCtrl"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.250106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ImmoCare.ListAdvertsViewCtrl"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.251682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ImmoCare.ListAdvertsViewCtrl&gt;"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.253117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ImmoCare.ListAdvertsViewCtrl&gt;"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526510189.25457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImmoCare/ListAdvertsViewCtrl.swift"
+            timestampString = "526526895.343561"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.(loadData () -&gt; ()).(closure #2)"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526514456.171571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImmoCare.ListAdvertsViewCtrl.(loadData () -&gt; ()).(closure #2).(closure #1)"
+                  moduleName = "ImmoCare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexisarnaud/Documents/ImmoCare/ImmoCare/ListAdvertsViewCtrl.swift"
+                  timestampString = "526514456.173798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImmoCare/ListAdvertsViewCtrl.swift"
+            timestampString = "526526895.343561"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
         lemail.keyboardType = .emailAddress
         lemail.font = UIFont.systemFont(ofSize:14)
         lemail.leftViewMode = .always
+        lemail.autocorrectionType = .no
+        lemail.spellCheckingType = .no
         lemail.leftView = self.getLeftView(image: #imageLiteral(resourceName: "usernameIcon"))
         return lemail
     }()
@@ -32,11 +34,14 @@ class LoginViewController: UIViewController {
     // password
     lazy var password: MyTextField = {
         let pwd = MyTextField(frame:CGRect(x:10, y:160, width:280, height:40))
+        pwd.isSecureTextEntry = true
         pwd.backgroundColor = .white
         pwd.placeholder = "Mot de passe"
         pwd.keyboardType = .default
         pwd.font = UIFont.systemFont(ofSize:14)
         pwd.leftViewMode = .always
+        pwd.autocorrectionType = .no
+        pwd.spellCheckingType = .no
         pwd.leftView = self.getLeftView(image: #imageLiteral(resourceName: "pwdIcon"))
         return pwd
     }()
@@ -113,7 +118,54 @@ class LoginViewController: UIViewController {
     
     func loginAction()
     {
-        
+        if(email.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(password.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre mot de passe.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else{
+            APIManager.sharedInstance.loginUser(_email: email.text!, _password: password.text!, onSuccess: { json in
+                if let string = json.rawString() {
+                    print(string)
+                }
+                DispatchQueue.main.async(execute: {
+                    
+                
+                if(json["statusCode"] != 200){
+                    let alertController = UIAlertController(title: "Oops!", message: "Utilisateur introuvable", preferredStyle: .alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .default)
+                    alertController.addAction(OKAction)
+                    self.present(alertController, animated: true, completion:nil)
+                } else {
+//                    let alertController = UIAlertController(title: "Super!", message: String(describing: json["message"]), preferredStyle: .alert)
+//                    let OKAction = UIAlertAction(title: "OK", style: .default)
+//                    alertController.addAction(OKAction)
+//                    self.present(alertController, animated: true, completion:nil)
+                    self.present(ListAdvertsViewCtrl(), animated: true, completion: nil)
+
+                }
+                    })
+            }, onFailure: { error in
+                DispatchQueue.main.async(execute: {
+                print(error)
+                let alertController = UIAlertController(title: "Error!", message: String(describing: error), preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default)
+                alertController.addAction(OKAction)
+                self.present(alertController, animated: true, completion:nil)
+                    })
+            })
+        }
     }
     
     func registerAction()

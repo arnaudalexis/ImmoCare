@@ -21,12 +21,19 @@ class ViewController: UIViewController {
         recognizer.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(recognizer)
         
-        // set label
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
-        label.center = CGPoint(x: 180, y: 300)
-        label.textAlignment = .center
-        label.text = "ImmoCare"
-        self.view.addSubview(label)
+//        // set label
+//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
+//        label.center = CGPoint(x: 180, y: 300)
+//        label.textAlignment = .center
+//        label.text = "ImmoCare"
+//        self.view.addSubview(label)
+        
+        let circleImg = UIImageView(frame:CGRect(x:0, y:0, width:350, height:100))
+        circleImg.clipsToBounds = true
+        circleImg.image = #imageLiteral(resourceName: "logo_immocare")
+        circleImg.center = self.view.center
+        circleImg.contentMode = .scaleAspectFit
+        self.view.addSubview(circleImg)
     }
 
     override func didReceiveMemoryWarning() {

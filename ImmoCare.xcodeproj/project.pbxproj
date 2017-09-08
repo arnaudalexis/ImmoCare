@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A86B02D1F26008D00146923 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B02C1F26008D00146923 /* RestApiManager.swift */; };
+		0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
+		0A86B0391F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
+		0A86B03A1F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
+		0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */; };
+		0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */; };
+		0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */; };
 		C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EC1EC30B14006281BA /* AppDelegate.swift */; };
 		C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EE1EC30B14006281BA /* ViewController.swift */; };
 		C61F16F21EC30B14006281BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61F16F01EC30B14006281BA /* Main.storyboard */; };
@@ -36,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A86B02C1F26008D00146923 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
+		0A86B0371F26207F00146923 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdvertViewCtrl.swift; sourceTree = "<group>"; };
+		0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsViewCtrl.swift; sourceTree = "<group>"; };
+		0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAdvertCtrl.swift; sourceTree = "<group>"; };
 		C61F16E91EC30B14006281BA /* ImmoCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmoCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61F16EC1EC30B14006281BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61F16EE1EC30B14006281BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A86B0331F261F7700146923 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C61F16E01EC30B14006281BA = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +104,7 @@
 				C61F17001EC30B15006281BA /* ImmoCareTests */,
 				C61F170B1EC30B15006281BA /* ImmoCareUITests */,
 				C61F16EA1EC30B14006281BA /* Products */,
+				0A86B0331F261F7700146923 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +121,15 @@
 		C61F16EB1EC30B14006281BA /* ImmoCare */ = {
 			isa = PBXGroup;
 			children = (
+				0A86B0371F26207F00146923 /* SwiftyJSON.swift */,
 				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
 				C61F16EE1EC30B14006281BA /* ViewController.swift */,
 				C61F171A1EC31A43006281BA /* LoginViewController.swift */,
 				C61F171C1EC4B62B006281BA /* RegisterViewController.swift */,
+				0A86B02C1F26008D00146923 /* RestApiManager.swift */,
+				0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */,
+				0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */,
+				0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */,
 				C61F16F01EC30B14006281BA /* Main.storyboard */,
 				C61F16F31EC30B14006281BA /* Assets.xcassets */,
 				C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */,
@@ -265,9 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */,
+				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
+				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
+				0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */,
 				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
 				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
 				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
+				0A86B02D1F26008D00146923 /* RestApiManager.swift in Sources */,
 				C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61F17021EC30B15006281BA /* ImmoCareTests.swift in Sources */,
+				0A86B0391F26207F00146923 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */,
+				0A86B03A1F26207F00146923 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -439,6 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

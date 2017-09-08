@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,6 +55,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBC-Ht-MnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="922.39999999999998" y="142.57871064467767"/>
+        </scene>
+        <!--AddAdvertViewCtrl-->
+        <scene sceneID="Dta-Sh-MKA">
+            <objects>
+                <viewController title="AddAdvertViewCtrl" id="hsX-KD-G8C" customClass="AddAdvertViewCtrl" customModule="ImmoCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Afl-2Y-yWu"/>
+                        <viewControllerLayoutGuide type="bottom" id="hNo-Zg-iqU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0c-g0-f0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="225-3l-kKX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rc4-DF-M7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="-540"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="K5i-PM-OKu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgX-Mr-IQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="bgL-am-eFD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="46" sectionHeaderHeight="18" sectionFooterHeight="18" id="JFW-fF-oyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="UWc-Hf-ugE" detailTextLabel="N65-Ll-YhU" style="IBUITableViewCellStyleSubtitle" id="f2h-rp-3Hh" customClass="MyCustomCell" customModule="ImmoCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f2h-rp-3Hh" id="H30-PZ-Imk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UWc-Hf-ugE">
+                                            <rect key="frame" x="15" y="6" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N65-Ll-YhU">
+                                            <rect key="frame" x="15" y="26.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bgL-am-eFD" id="VQx-Ml-uOS"/>
+                            <outlet property="delegate" destination="bgL-am-eFD" id="wcV-kS-j7p"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1852" y="-513"/>
         </scene>
     </scenes>
 </document>

@@ -43,6 +43,7 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
     // password
     lazy var password: MyTextField = {
         let pwd = MyTextField(frame:CGRect(x:10, y:220, width:280, height:40))
+        pwd.isSecureTextEntry = true
         pwd.backgroundColor = .white
         pwd.placeholder = "Mot de passe"
         pwd.font = UIFont.systemFont(ofSize:14)
@@ -156,15 +157,15 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     func registerAction()
     {
-        if(userName.text?.characters.count == 0){
-            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre nom.", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            alertController.addAction(cancelAction)
-            let OKAction = UIAlertAction(title: "OK", style: .default)
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion:nil)
-        }
-        else if(email.text?.characters.count == 0){
+//        if(userName.text?.characters.count == 0){
+//            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre nom.", preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+//            alertController.addAction(cancelAction)
+//            let OKAction = UIAlertAction(title: "OK", style: .default)
+//            alertController.addAction(OKAction)
+//            self.present(alertController, animated: true, completion:nil)
+//        }
+        if(email.text?.characters.count == 0){
             let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
@@ -180,21 +181,43 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
             alertController.addAction(OKAction)
             self.present(alertController, animated: true, completion:nil)
         }
-        else if(contentPicker.text?.characters.count == 0){
-            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre rôle.", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            alertController.addAction(cancelAction)
-            let OKAction = UIAlertAction(title: "OK", style: .default)
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion:nil)
-        }
+//        else if(contentPicker.text?.characters.count == 0){
+//            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre rôle.", preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+//            alertController.addAction(cancelAction)
+//            let OKAction = UIAlertAction(title: "OK", style: .default)
+//            alertController.addAction(OKAction)
+//            self.present(alertController, animated: true, completion:nil)
+//        }
         else{
-            let alertController = UIAlertController(title: "Super!", message: "Vous pouvez désomais vous connecter", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: .default)
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion:nil)
-            self.present(LoginViewController(), animated: true, completion: nil)
-        }
+            APIManager.sharedInstance.registerUser(_email: email.text!, _password: password.text!, onSuccess: { json in
+                if let string = json.rawString() {
+                    print(string)
+                }
+                DispatchQueue.main.async(execute: {
+                    
+                    
+                    if(json["statusCode"] != 200){
+                        let alertController = UIAlertController(title: "Oops!", message: "Cet utilisateur existe déjà.", preferredStyle: .alert)
+                        let OKAction = UIAlertAction(title: "OK", style: .default)
+                        alertController.addAction(OKAction)
+                        self.present(alertController, animated: true, completion:nil)
+                    } else {
+                        let alertController = UIAlertController(title: "Super!", message: String(describing: json["message"]), preferredStyle: .alert)
+                        let OKAction = UIAlertAction(title: "OK", style: .default)
+                        alertController.addAction(OKAction)
+                        self.present(alertController, animated: true, completion:nil)
+                    }
+                })
+            }, onFailure: { error in
+                DispatchQueue.main.async(execute: {
+                    print(error)
+                    let alertController = UIAlertController(title: "Error!", message: String(describing: error), preferredStyle: .alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .default)
+                    alertController.addAction(OKAction)
+                    self.present(alertController, animated: true, completion:nil)
+                })
+            })        }
         
     }
     
