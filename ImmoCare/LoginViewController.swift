@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     // container login
@@ -148,11 +149,8 @@ class LoginViewController: UIViewController {
                     alertController.addAction(OKAction)
                     self.present(alertController, animated: true, completion:nil)
                 } else {
-//                    let alertController = UIAlertController(title: "Super!", message: String(describing: json["message"]), preferredStyle: .alert)
-//                    let OKAction = UIAlertAction(title: "OK", style: .default)
-//                    alertController.addAction(OKAction)
-//                    self.present(alertController, animated: true, completion:nil)
-                    self.present(ListAdvertsViewCtrl(), animated: true, completion: nil)
+                    let user = User(json: json["result"])
+                    print(user?.name as! String);
 
                 }
                     })

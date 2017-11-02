@@ -28,12 +28,12 @@ class ViewController: UIViewController {
 //        label.text = "ImmoCare"
 //        self.view.addSubview(label)
         
-        let circleImg = UIImageView(frame:CGRect(x:0, y:0, width:350, height:100))
-        circleImg.clipsToBounds = true
-        circleImg.image = #imageLiteral(resourceName: "logo_immocare")
-        circleImg.center = self.view.center
-        circleImg.contentMode = .scaleAspectFit
-        self.view.addSubview(circleImg)
+//        let circleImg = UIImageView(frame:CGRect(x:0, y:0, width:350, height:100))
+//        circleImg.clipsToBounds = true
+//        circleImg.image = #imageLiteral(resourceName: "logo_immocare")
+//        circleImg.center = self.view.center
+//        circleImg.contentMode = .scaleAspectFit
+//        self.view.addSubview(circleImg)
     }
 
     override func didReceiveMemoryWarning() {

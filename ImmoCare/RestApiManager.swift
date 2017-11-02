@@ -94,7 +94,7 @@ class APIManager {
                     if(statusCode != 200){
                         result = try JSON(["statusCode":statusCode, "message": "Error"])
                     } else {
-                        result = try JSON(["statusCode":statusCode, "message": "Vous êtes connecté!"])
+                        result = try JSON(["statusCode":statusCode, "message": "Vous êtes connecté!", "result": data])
                     }
                     print(result)
                     onSuccess(result)

@@ -12,8 +12,13 @@
 		0A86B0391F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
 		0A86B03A1F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
 		0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */; };
+		0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */; };
+		0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAD1F98991F00999EEC /* Advert.swift */; };
+		0AD93DB01F9899BA00999EEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAF1F9899BA00999EEC /* User.swift */; };
 		0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */; };
 		0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */; };
+		1DFAF21B5D2027C3385219BB /* Pods_ImmoCareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */; };
+		211FE2D67EBFED2015072E63 /* Pods_ImmoCareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D975F364703A4B35E6A297 /* Pods_ImmoCareTests.framework */; };
 		C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EC1EC30B14006281BA /* AppDelegate.swift */; };
 		C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F16EE1EC30B14006281BA /* ViewController.swift */; };
 		C61F16F21EC30B14006281BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61F16F01EC30B14006281BA /* Main.storyboard */; };
@@ -23,6 +28,7 @@
 		C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */; };
 		C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171A1EC31A43006281BA /* LoginViewController.swift */; };
 		C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171C1EC4B62B006281BA /* RegisterViewController.swift */; };
+		EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04F016EE35031CEE43A98CEC /* Pods-ImmoCareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests.release.xcconfig"; sourceTree = "<group>"; };
+		088CA6DDC6CB168859F0AA2F /* Pods-ImmoCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare.release.xcconfig"; sourceTree = "<group>"; };
 		0A86B02C1F26008D00146923 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		0A86B0371F26207F00146923 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdvertViewCtrl.swift; sourceTree = "<group>"; };
+		0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsCtrl.swift; sourceTree = "<group>"; };
+		0AD93DAD1F98991F00999EEC /* Advert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
+		0AD93DAF1F9899BA00999EEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsViewCtrl.swift; sourceTree = "<group>"; };
 		0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAdvertCtrl.swift; sourceTree = "<group>"; };
+		15914C80590E4BD4D2C8C0CF /* Pods-ImmoCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37D975F364703A4B35E6A297 /* Pods_ImmoCareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmoCareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4991A8479896699B0E399A5C /* Pods-ImmoCareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmoCareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61F16E91EC30B14006281BA /* ImmoCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmoCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61F16EC1EC30B14006281BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61F16EE1EC30B14006281BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +78,9 @@
 		C61F170E1EC30B15006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61F171A1EC31A43006281BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C61F171C1EC4B62B006281BA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D500D3555716E441C9E8A752 /* Pods-ImmoCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare.debug.xcconfig"; sourceTree = "<group>"; };
+		F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmoCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211FE2D67EBFED2015072E63 /* Pods_ImmoCareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFAF21B5D2027C3385219BB /* Pods_ImmoCareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +114,48 @@
 		0A86B0331F261F7700146923 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */,
+				37D975F364703A4B35E6A297 /* Pods_ImmoCareTests.framework */,
+				7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AD93DA61F97ACAB00999EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0AD93DA71F97AFED00999EEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AD93DAD1F98991F00999EEC /* Advert.swift */,
+				0AD93DAF1F9899BA00999EEC /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0AD93DA81F97AFF300999EEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1A7CF6818CFBEECD1FF96AC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */,
+				088CA6DDC6CB168859F0AA2F /* Pods-ImmoCare.release.xcconfig */,
+				4991A8479896699B0E399A5C /* Pods-ImmoCareTests.debug.xcconfig */,
+				04F016EE35031CEE43A98CEC /* Pods-ImmoCareTests.release.xcconfig */,
+				15914C80590E4BD4D2C8C0CF /* Pods-ImmoCareUITests.debug.xcconfig */,
+				D500D3555716E441C9E8A752 /* Pods-ImmoCareUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C61F16E01EC30B14006281BA = {
@@ -105,6 +166,7 @@
 				C61F170B1EC30B15006281BA /* ImmoCareUITests */,
 				C61F16EA1EC30B14006281BA /* Products */,
 				0A86B0331F261F7700146923 /* Frameworks */,
+				1A7CF6818CFBEECD1FF96AC1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +183,9 @@
 		C61F16EB1EC30B14006281BA /* ImmoCare */ = {
 			isa = PBXGroup;
 			children = (
+				0AD93DA81F97AFF300999EEC /* Controller */,
+				0AD93DA71F97AFED00999EEC /* Model */,
+				0AD93DA61F97ACAB00999EEC /* View */,
 				0A86B0371F26207F00146923 /* SwiftyJSON.swift */,
 				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
 				C61F16EE1EC30B14006281BA /* ViewController.swift */,
@@ -163,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C61F17111EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCare" */;
 			buildPhases = (
+				F4194DB2697057D70266EC4F /* [CP] Check Pods Manifest.lock */,
 				C61F16E51EC30B14006281BA /* Sources */,
 				C61F16E61EC30B14006281BA /* Frameworks */,
 				C61F16E71EC30B14006281BA /* Resources */,
+				28A9A5FF46D3A473B4AD67D7 /* [CP] Embed Pods Frameworks */,
+				2870EF3D21904F3A8523EDF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C61F17141EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareTests" */;
 			buildPhases = (
+				6FE3BDDC3D67FB46BA13F186 /* [CP] Check Pods Manifest.lock */,
 				C61F16F91EC30B15006281BA /* Sources */,
 				C61F16FA1EC30B15006281BA /* Frameworks */,
 				C61F16FB1EC30B15006281BA /* Resources */,
+				FE21432705C8AD1E118D690A /* [CP] Embed Pods Frameworks */,
+				31A4F058E02278E3664CEF16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C61F17171EC30B15006281BA /* Build configuration list for PBXNativeTarget "ImmoCareUITests" */;
 			buildPhases = (
+				5F3121EEC6FC00EBE8B06408 /* [CP] Check Pods Manifest.lock */,
 				C61F17041EC30B15006281BA /* Sources */,
 				C61F17051EC30B15006281BA /* Frameworks */,
 				C61F17061EC30B15006281BA /* Resources */,
+				019E59E15EF12BA73AA3F137 /* [CP] Embed Pods Frameworks */,
+				F4D87048849792F0E923D93F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,17 +359,170 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		019E59E15EF12BA73AA3F137 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2870EF3D21904F3A8523EDF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28A9A5FF46D3A473B4AD67D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A4F058E02278E3664CEF16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3121EEC6FC00EBE8B06408 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImmoCareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FE3BDDC3D67FB46BA13F186 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImmoCareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4194DB2697057D70266EC4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImmoCare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4D87048849792F0E923D93F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE21432705C8AD1E118D690A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C61F16E51EC30B14006281BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */,
 				0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */,
 				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
 				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
 				0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */,
 				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
 				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
+				0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */,
+				0AD93DB01F9899BA00999EEC /* User.swift in Sources */,
 				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
 				0A86B02D1F26008D00146923 /* RestApiManager.swift in Sources */,
 				C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */,
@@ -452,6 +679,7 @@
 		};
 		C61F17121EC30B15006281BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImmoCare/Info.plist;
@@ -465,6 +693,7 @@
 		};
 		C61F17131EC30B15006281BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088CA6DDC6CB168859F0AA2F /* Pods-ImmoCare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImmoCare/Info.plist;
@@ -478,6 +707,7 @@
 		};
 		C61F17151EC30B15006281BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4991A8479896699B0E399A5C /* Pods-ImmoCareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +722,7 @@
 		};
 		C61F17161EC30B15006281BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F016EE35031CEE43A98CEC /* Pods-ImmoCareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +737,7 @@
 		};
 		C61F17181EC30B15006281BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15914C80590E4BD4D2C8C0CF /* Pods-ImmoCareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ImmoCareUITests/Info.plist;
@@ -519,6 +751,7 @@
 		};
 		C61F17191EC30B15006281BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D500D3555716E441C9E8A752 /* Pods-ImmoCareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ImmoCareUITests/Info.plist;

@@ -1,0 +1,6 @@
+framework module Pods_ImmoCareTests {
+  umbrella header "Pods-ImmoCareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
