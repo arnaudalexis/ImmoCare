@@ -28,6 +28,15 @@
 		C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F170C1EC30B15006281BA /* ImmoCareUITests.swift */; };
 		C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171A1EC31A43006281BA /* LoginViewController.swift */; };
 		C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F171C1EC4B62B006281BA /* RegisterViewController.swift */; };
+		C6A41F501FB1C1C30091BFE3 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F4D1FB1C1C30091BFE3 /* EventDetailViewController.swift */; };
+		C6A41F511FB1C1C30091BFE3 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */; };
+		C6A41F521FB1C1C30091BFE3 /* EventManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */; };
+		C6A41F551FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F531FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift */; };
+		C6A41F561FB1C1D10091BFE3 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F541FB1C1D10091BFE3 /* EventCollectionViewCell.swift */; };
+		C6A41F5B1FB1C1DE0091BFE3 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F571FB1C1DE0091BFE3 /* EventHandler.swift */; };
+		C6A41F5C1FB1C1DE0091BFE3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F581FB1C1DE0091BFE3 /* Event.swift */; };
+		C6A41F5D1FB1C1DE0091BFE3 /* ListOfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */; };
+		C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */; };
 		EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +87,15 @@
 		C61F170E1EC30B15006281BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61F171A1EC31A43006281BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C61F171C1EC4B62B006281BA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C6A41F4D1FB1C1C30091BFE3 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManagerController.swift; sourceTree = "<group>"; };
+		C6A41F531FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTitleCollectionReusableView.swift; sourceTree = "<group>"; };
+		C6A41F541FB1C1D10091BFE3 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6A41F571FB1C1DE0091BFE3 /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
+		C6A41F581FB1C1DE0091BFE3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfEvents.swift; sourceTree = "<group>"; };
+		C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D500D3555716E441C9E8A752 /* Pods-ImmoCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare.debug.xcconfig"; sourceTree = "<group>"; };
 		F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmoCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +142,8 @@
 		0AD93DA61F97ACAB00999EEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C6A41F531FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift */,
+				C6A41F541FB1C1D10091BFE3 /* EventCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -131,6 +151,10 @@
 		0AD93DA71F97AFED00999EEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C6A41F571FB1C1DE0091BFE3 /* EventHandler.swift */,
+				C6A41F581FB1C1DE0091BFE3 /* Event.swift */,
+				C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */,
+				C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */,
 				0AD93DAD1F98991F00999EEC /* Advert.swift */,
 				0AD93DAF1F9899BA00999EEC /* User.swift */,
 			);
@@ -141,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */,
+				C6A41F4D1FB1C1C30091BFE3 /* EventDetailViewController.swift */,
+				C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */,
+				C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -514,18 +541,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A41F561FB1C1D10091BFE3 /* EventCollectionViewCell.swift in Sources */,
 				0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */,
 				0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */,
 				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
+				C6A41F501FB1C1C30091BFE3 /* EventDetailViewController.swift in Sources */,
 				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
+				C6A41F5C1FB1C1DE0091BFE3 /* Event.swift in Sources */,
+				C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */,
 				0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */,
 				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
 				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
 				0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */,
 				0AD93DB01F9899BA00999EEC /* User.swift in Sources */,
 				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
+				C6A41F521FB1C1C30091BFE3 /* EventManagerController.swift in Sources */,
+				C6A41F5B1FB1C1DE0091BFE3 /* EventHandler.swift in Sources */,
+				C6A41F511FB1C1C30091BFE3 /* AddEventViewController.swift in Sources */,
+				C6A41F551FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift in Sources */,
 				0A86B02D1F26008D00146923 /* RestApiManager.swift in Sources */,
 				C61F171D1EC4B62B006281BA /* RegisterViewController.swift in Sources */,
+				C6A41F5D1FB1C1DE0091BFE3 /* ListOfEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

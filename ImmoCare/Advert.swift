@@ -9,14 +9,10 @@
 import UIKit
 
 class Advert {
-    
-    //MARK: Properties
-    
+        
     var title: String
     var date: String
     var author: String
-    
-    //MARK: Initialization
     
     init?(title: String, date: String, author: String) {
         

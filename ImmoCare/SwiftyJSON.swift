@@ -102,10 +102,10 @@ public struct JSON {
 
      - returns: The created JSON
      */
-    public init(data: Data, options opt: JSONSerialization.ReadingOptions = []) throws {
-        let object: Any = try JSONSerialization.jsonObject(with: data, options: opt)
-        self.init(jsonObject: object)
-    }
+//    public init(data: Data, options opt: JSONSerialization.ReadingOptions = []) throws {
+//        let object: Any = try JSONSerialization.jsonObject(with: data, options: opt)
+//        self.init(jsonObject: object)
+//    }
 
     /**
      Creates a JSON object
@@ -146,10 +146,10 @@ public struct JSON {
      - returns: The created JSON
      */
     @available(*, deprecated, message: "Use instead `init(parseJSON: )`")
-    public static func parse(_ json: String) -> JSON {
-        return json.data(using: String.Encoding.utf8)
-            .flatMap { try? JSON(data: $0) } ?? JSON(NSNull())
-    }
+//    public static func parse(_ json: String) -> JSON {
+//        return json.data(using: String.Encoding.utf8)
+//            .flatMap { try? JSON(data: $0) } ?? JSON(NSNull())
+//    }
 
     /**
      Creates a JSON using the object.
@@ -601,13 +601,13 @@ extension JSON: Swift.RawRepresentable {
         return self.object
     }
 
-    public func rawData(options opt: JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Data {
-        guard JSONSerialization.isValidJSONObject(self.object) else {
-            throw SwiftyJSONError.invalidJSON
-        }
-
-        return try JSONSerialization.data(withJSONObject: self.object, options: opt)
-	}
+//    public func rawData(options opt: JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Data {
+//        guard JSONSerialization.isValidJSONObject(self.object) else {
+//            throw SwiftyJSONError.invalidJSON
+//        }
+//
+//        return try JSONSerialization.data(withJSONObject: self.object, options: opt)
+//	}
 
 	public func rawString(_ encoding: String.Encoding = .utf8, options opt: JSONSerialization.WritingOptions = .prettyPrinted) -> String? {
 		do {
@@ -638,8 +638,8 @@ extension JSON: Swift.RawRepresentable {
 			do {
 				if !(options[.castNilToNSNull] as? Bool ?? false) {
 					let jsonOption = options[.jsonSerialization] as? JSONSerialization.WritingOptions ?? JSONSerialization.WritingOptions.prettyPrinted
-					let data = try self.rawData(options: jsonOption)
-					return String(data: data, encoding: encoding)
+					//let data = try self.rawData(options: jsonOption)
+					//return String(data: data, encoding: encoding)
 				}
 
 				guard let dict = self.object as? [String: Any?] else {
@@ -671,9 +671,9 @@ extension JSON: Swift.RawRepresentable {
 		case .array:
             do {
 				if !(options[.castNilToNSNull] as? Bool ?? false) {
-					let jsonOption = options[.jsonSerialization] as? JSONSerialization.WritingOptions ?? JSONSerialization.WritingOptions.prettyPrinted
-					let data = try self.rawData(options: jsonOption)
-					return String(data: data, encoding: encoding)
+					//let jsonOption = options[.jsonSerialization] as? JSONSerialization.WritingOptions ?? JSONSerialization.WritingOptions.prettyPrinted
+					//let data = try self.rawData(options: jsonOption)
+					//return String(data: data, encoding: encoding)
 				}
 
                 guard let array = self.object as? [Any?] else {
