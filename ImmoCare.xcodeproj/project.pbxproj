@@ -37,6 +37,7 @@
 		C6A41F5C1FB1C1DE0091BFE3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F581FB1C1DE0091BFE3 /* Event.swift */; };
 		C6A41F5D1FB1C1DE0091BFE3 /* ListOfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */; };
 		C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */; };
+		C6E559331FC5C21B009058C8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E559321FC5C21B009058C8 /* ProfileViewController.swift */; };
 		EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		C6A41F581FB1C1DE0091BFE3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfEvents.swift; sourceTree = "<group>"; };
 		C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		C6E559321FC5C21B009058C8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D500D3555716E441C9E8A752 /* Pods-ImmoCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare.debug.xcconfig"; sourceTree = "<group>"; };
 		F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmoCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 				C6A41F4D1FB1C1C30091BFE3 /* EventDetailViewController.swift */,
 				C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */,
 				C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */,
+				C6E559321FC5C21B009058C8 /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
 				C6A41F501FB1C1C30091BFE3 /* EventDetailViewController.swift in Sources */,
 				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
+				C6E559331FC5C21B009058C8 /* ProfileViewController.swift in Sources */,
 				C6A41F5C1FB1C1DE0091BFE3 /* Event.swift in Sources */,
 				C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */,
 				0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */,
