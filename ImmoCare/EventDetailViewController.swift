@@ -2,8 +2,6 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var starDateLabel: UILabel!
@@ -19,4 +17,4 @@ class EventDetailViewController: UIViewController {
         starDateLabel.text = event?.startDate
         endDateLabel.text = event?.endDate
     }
-}
+} //class

@@ -1,11 +1,3 @@
-//
-//  EventManagerController.swift
-//  EventShare
-//
-//  Created by Kevin NGUYEN on 31/10/2017.
-//  Copyright © 2017 ImmoCare. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -13,25 +5,20 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
     
     var data = Data()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         collectionView?.reloadData()
     }
     
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return data.eventsList.count
-    }
+    }  // protocol collectionView
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         let eventsList = data.eventsList[section]
         return eventsList.events.count
-    }
+    }  // protocol collectionView
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! EventCollectionViewCell
@@ -45,7 +32,7 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
         cell.configureCellWith(event: event)
         
         return cell
-    }
+    } // protocol collectionView
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let event = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Event", for: indexPath) as! EventTitleCollectionReusableView
@@ -83,7 +70,6 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
         return eventsList.events[indexPath.row]
     } // protocol collectionView
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let picDimension = self.view.frame.size.width / 3.0
         return CGSize(width: picDimension, height: picDimension)
@@ -93,6 +79,5 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
         let leftRightInset = self.view.frame.size.width / 10.0
         return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset)
     } // protocol collectionView
-    
     
 } // class

@@ -1,11 +1,3 @@
-//
-//  EventManagerController.swift
-//  EventShare
-//
-//  Created by Kevin NGUYEN on 31/10/2017.
-//  Copyright © 2017 ImmoCare. All rights reserved.
-//
-
 import Foundation
 
 class Event {
@@ -21,4 +13,4 @@ class Event {
         self.startDate = startDated
         self.endDate = endDated
     }
-}
+} // class

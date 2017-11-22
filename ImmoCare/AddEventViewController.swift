@@ -17,7 +17,6 @@ class AddEventViewController: UIViewController {
         super.viewDidLoad()
         startDateTextField.addTarget(self, action: #selector(createStartDatePicker), for: .touchDown)
         endDateTextField.addTarget(self, action: #selector(createEndDatePicker), for: .touchDown)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +24,7 @@ class AddEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // get event's data
     func getData(data: Data) {
         self.data = data
     } // function getData
@@ -113,5 +113,5 @@ class AddEventViewController: UIViewController {
             alert.addAction(alertAction)
             self.present(alert, animated: true, completion: nil)
         }
-    }
+    } // function saveAction
 }
