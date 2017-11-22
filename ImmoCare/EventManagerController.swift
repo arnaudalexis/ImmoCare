@@ -38,7 +38,7 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
         
         cell.deleteBtn.layer.setValue(indexPath.row, forKey: "index")
         cell.deleteBtn.tag = indexPath.row
-        cell.deleteBtn.addTarget(self, action: #selector(EventManagerController.deleteUser(_:)), for: UIControlEvents.touchUpInside)
+        cell.deleteBtn.addTarget(self, action: #selector(EventManagerController.deleteEvent(_:)), for: UIControlEvents.touchUpInside)
         cell.deleteBtn.isHidden = true;
         
         let event = eventAtIndexPath(indexPath: indexPath as NSIndexPath)
@@ -50,18 +50,19 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let event = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Event", for: indexPath) as! EventTitleCollectionReusableView
         return event
-    }
+    } // protocol collectionView
     
     
-    func deleteUser(_ sender:UIButton!) {
+    // delete event
+    func deleteEvent(_ sender:UIButton!) {
         
         let i : Int = (sender.layer.value(forKey: "index")) as! Int
         print(i);
         data.eventsList.remove(at: i)
         self.collectionView?.reloadData()
-    }
+    } // function deleteEvent
     
-    
+    // prepare segue to go to another view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowDetail")
         {
@@ -75,23 +76,23 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
             let addEvent = segue.destination as! AddEventViewController
             addEvent.getData(data: data)
         }
-    }
+    } // function prepare
     
     func eventAtIndexPath(indexPath: NSIndexPath) -> Event {
         let eventsList = data.eventsList[indexPath.section]
         return eventsList.events[indexPath.row]
-    }
+    } // protocol collectionView
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let picDimension = self.view.frame.size.width / 3.0
         return CGSize(width: picDimension, height: picDimension)
-    }
+    } // protocol collectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let leftRightInset = self.view.frame.size.width / 10.0
         return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset)
-    }
+    } // protocol collectionView
     
     
 } // class
