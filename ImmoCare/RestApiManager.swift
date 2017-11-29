@@ -17,8 +17,9 @@ class APIManager {
     static let addAdvertEndpoint = "/addAdvert/"
     static let listAdvertsEndpoint = "/advertslist/"
     static let getAdvertEndpoint = "/advert/"
+    static let addEventEndpoint = "/addEvent/"
     
-    func registerUser(_email: String, _password: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
+    func registerUser(_email: String, _password: String, _name: String, _firstName: String, _city: String, _country: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
         guard let url = URL(string: baseURL + APIManager.registerEndpoint) else {
             print("Error: cannot create URL")
             return
@@ -26,7 +27,7 @@ class APIManager {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         
-        let dict = ["email": _email, "password": _password] as [String: Any]
+        let dict = ["email": _email, "password": _password, "firstname": _firstName, "name": _name, "city": _city, "country": _country] as [String: Any]
         do{
             let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
             
@@ -91,10 +92,12 @@ class APIManager {
                     var result = try JSON(["statusCode":500, "message": "Internal Error"])
                     let httpResponse = response as! HTTPURLResponse
                     let statusCode = httpResponse.statusCode
+                    print(statusCode)
                     if(statusCode != 200){
                         result = try JSON(["statusCode":statusCode, "message": "Error"])
                     } else {
-                        result = try JSON(["statusCode":statusCode, "message": "Vous êtes connecté!", "result": data])
+                        let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
+                        result = try JSON(["statusCode":statusCode, "message": "Vous êtes connecté!", "result": json])
                     }
                     print(result)
                     onSuccess(result)
@@ -208,6 +211,52 @@ class APIManager {
                         result = try JSON(["statusCode":statusCode, "result": "Error"])
                     } else {
                         result = try JSON(["statusCode":statusCode, "result": data])
+                    }
+                    print(result)
+                    onSuccess(result)
+                    
+                } catch{
+                    print(error)
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func addEvent(_title: String, _body: String, _startDate: String, _endDate: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
+        guard let url = URL(string: baseURL + APIManager.addEventEndpoint) else {
+            print("Error: cannot create URL")
+            return
+        }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        
+        let dict = ["title": _title, "body": _body, "start": _startDate, "end": _endDate ] as [String: Any]
+        do{
+            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            
+            urlRequest.httpBody = jsonData
+        } catch{
+            print(error)
+        }
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest as URLRequest, completionHandler: {data, response, error -> Void in
+            if(error != nil){
+                onFailure(error!)
+            } else{
+                do{
+                    var result = try JSON(["statusCode":500, "message": "Internal Error"])
+                    let httpResponse = response as! HTTPURLResponse
+                    let statusCode = httpResponse.statusCode
+                    print(statusCode)
+                    print(httpResponse)
+                    if(statusCode != 200){
+                        result = try JSON(["statusCode":statusCode, "message": "Error"])
+                    } else {
+                        result = try JSON(["statusCode":statusCode, "message": "Vous avez ajouté un évènement!"])
                     }
                     print(result)
                     onSuccess(result)

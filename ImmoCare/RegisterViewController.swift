@@ -8,59 +8,17 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class RegisterViewController: UIViewController {
 
-    // container register
-    var container: UIView = {
-        let my_view = UIView(frame:CGRect(x:0, y:0, width:300, height:420))
-        my_view.backgroundColor = UIColor(red:0.16, green:0.34, blue:0.56, alpha: 1.0)
-        return my_view
-    }()
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var firstNameField: UITextField!
     
-    // username
-    lazy var userName: MyTextField = {
-        let name = MyTextField(frame:CGRect(x:10, y:100, width:280, height:40))
-        name.backgroundColor = .white
-        name.placeholder = "Nom"
-        name.font = UIFont.systemFont(ofSize:14)
-        name.leftViewMode = .always
-        name.leftView = self.getLeftView(image: #imageLiteral(resourceName: "usernameIcon"))
-        return name
-    }()
+    @IBAction func loginAction(_ sender: Any) {
+        self.present(LoginViewController(), animated: true, completion: nil)
+    }
     
-    // email
-    lazy var email: MyTextField = {
-        let lemail = MyTextField(frame:CGRect(x:10, y:160, width:280, height:40))
-        lemail.backgroundColor = .white
-        lemail.placeholder = "Email"
-        lemail.keyboardType = .emailAddress
-        lemail.font = UIFont.systemFont(ofSize:14)
-        lemail.leftViewMode = .always
-        lemail.leftView = self.getLeftView(image: #imageLiteral(resourceName: "mailIcon"))
-        return lemail
-    }()
-    
-    // password
-    lazy var password: MyTextField = {
-        let pwd = MyTextField(frame:CGRect(x:10, y:220, width:280, height:40))
-        pwd.isSecureTextEntry = true
-        pwd.backgroundColor = .white
-        pwd.placeholder = "Mot de passe"
-        pwd.font = UIFont.systemFont(ofSize:14)
-        pwd.leftViewMode = .always
-        pwd.leftView = self.getLeftView(image: #imageLiteral(resourceName: "pwdIcon"))
-        return pwd
-    }()
-    
-    lazy var contentPicker:MyTextField = {
-        let lpicker = MyTextField(frame:CGRect(x:10, y:280, width:280, height:40))
-        lpicker.backgroundColor = .white
-        lpicker.placeholder = "Rôle"
-        lpicker.font = UIFont.systemFont(ofSize:14)
-        lpicker.leftViewMode = .always
-        lpicker.leftView = self.getLeftView(image: #imageLiteral(resourceName: "usernameIcon"))
-        return lpicker
-    }()
     
     var contentViewController = ["vacancier", "bénévole", "auto-entrepreneur"]
 
@@ -79,93 +37,32 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(red:0.49, green:0.73, blue:0.71, alpha: 1.0)
-        
-        // set logo circle in container
-        let circleImg = UIImageView(frame:CGRect(x:self.container.frame.midX - 30, y:10, width:60, height:60))
-        circleImg.backgroundColor = .white
-        circleImg.layer.cornerRadius = 30
-        circleImg.clipsToBounds = true
-        circleImg.image = #imageLiteral(resourceName: "registerIcon")
-        self.container.addSubview(circleImg)
-        
-        // set container
-        self.view.addSubview(self.container)
-        
-        // set email textfield
-        self.container.addSubview(self.email)
-        
-        // set name textfield
-        self.container.addSubview(self.userName)
-        
-        // set password textfield
-        self.container.addSubview(self.password)
-        
-        // set textfield for picker
-        self.container.addSubview(self.contentPicker)
-        
-        // set picker
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        contentPicker.inputView = pickerView
-        
-        // set button register
-        let btnRegister = UIButton(frame:CGRect(x:10, y:340, width:280, height:40))
-        btnRegister.setBackgroundImage(UIImage(color:UIColor(red:0.27, green:0.83, blue:0.76, alpha: 1.0)), for: .normal)
-        btnRegister.setTitle("Register", for: .normal)
-        btnRegister.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btnRegister.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
-        self.container.addSubview(btnRegister)
-        
-        // set button login
-        let btnLogin = UIButton(frame:CGRect(x:230, y:380, width:70, height:40))
-        btnLogin.setTitle("Login", for: .normal)
-        btnLogin.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btnLogin.setTitleColor(UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0), for: .highlighted)
-        btnLogin.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
-        self.container.addSubview(btnLogin)
-        
-        // set position container on center
-        self.container.center = self.view.center
     }
     
-    // set number of component in the picker
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // set number of line in the picker
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return contentViewController.count
-    }
-    
-    // set title for each line
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return contentViewController[row]
-    }
-    
-    // update textfield according to the picker
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        contentPicker.text = contentViewController[row]
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func registerAction()
-    {
-//        if(userName.text?.characters.count == 0){
-//            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre nom.", preferredStyle: .alert)
-//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-//            alertController.addAction(cancelAction)
-//            let OKAction = UIAlertAction(title: "OK", style: .default)
-//            alertController.addAction(OKAction)
-//            self.present(alertController, animated: true, completion:nil)
-//        }
-        if(email.text?.characters.count == 0){
+    @IBAction func registerAction(_ sender: Any) {
+        if(firstNameField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre prénom.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(nameField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre nom.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(emailField.text?.characters.count == 0){
             let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
@@ -173,7 +70,15 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
             alertController.addAction(OKAction)
             self.present(alertController, animated: true, completion:nil)
         }
-        else if(password.text?.characters.count == 0){
+        else if(!isValidEmailAddress(emailAddressString: emailField.text!)){
+            let alertController = UIAlertController(title: "Oops!", message: "Votre adresse mail est invalide.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(passwordField.text?.characters.count == 0){
             let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre mot de passe.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
@@ -181,16 +86,8 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
             alertController.addAction(OKAction)
             self.present(alertController, animated: true, completion:nil)
         }
-//        else if(contentPicker.text?.characters.count == 0){
-//            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre rôle.", preferredStyle: .alert)
-//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-//            alertController.addAction(cancelAction)
-//            let OKAction = UIAlertAction(title: "OK", style: .default)
-//            alertController.addAction(OKAction)
-//            self.present(alertController, animated: true, completion:nil)
-//        }
         else{
-            APIManager.sharedInstance.registerUser(_email: email.text!, _password: password.text!, onSuccess: { json in
+            APIManager.sharedInstance.registerUser(_email: emailField.text!, _password: passwordField.text!, _name: nameField.text!, _firstName: firstNameField.text!, _city: "", _country: "", onSuccess: { json in
                 if let string = json.rawString() {
                     print(string)
                 }
@@ -221,8 +118,27 @@ class RegisterViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
     }
     
-    func loginAction()
-    {
-        self.present(LoginViewController(), animated: true, completion: nil)
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0
+            {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
     }
+    
 }

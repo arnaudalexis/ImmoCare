@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     // change view if left swipe detected
     func swipeLeft(recognizer : UISwipeGestureRecognizer)
     {
-        self.present(LoginViewController(), animated: true, completion: nil)
+         self.performSegue(withIdentifier: "initSegue", sender: self)
     }
 
 }

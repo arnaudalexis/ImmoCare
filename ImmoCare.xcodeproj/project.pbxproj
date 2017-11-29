@@ -15,6 +15,7 @@
 		0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */; };
 		0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAD1F98991F00999EEC /* Advert.swift */; };
 		0AD93DB01F9899BA00999EEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAF1F9899BA00999EEC /* User.swift */; };
+		0AE1CEDE1FCC5D9F00863B35 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1CEDD1FCC5D9F00863B35 /* LocationServices.swift */; };
 		0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */; };
 		0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */; };
 		1DFAF21B5D2027C3385219BB /* Pods_ImmoCareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */; };
@@ -67,6 +68,7 @@
 		0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsCtrl.swift; sourceTree = "<group>"; };
 		0AD93DAD1F98991F00999EEC /* Advert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
 		0AD93DAF1F9899BA00999EEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0AE1CEDD1FCC5D9F00863B35 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsViewCtrl.swift; sourceTree = "<group>"; };
 		0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAdvertCtrl.swift; sourceTree = "<group>"; };
 		15914C80590E4BD4D2C8C0CF /* Pods-ImmoCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,12 @@
 				C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */,
 				C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */,
 				C6E559341FC5CDC5009058C8 /* ProfileViewController.swift */,
+				0AE1CEDD1FCC5D9F00863B35 /* LocationServices.swift */,
+				C61F171C1EC4B62B006281BA /* RegisterViewController.swift */,
+				C61F171A1EC31A43006281BA /* LoginViewController.swift */,
+				0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */,
+				0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */,
+				0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -219,12 +227,7 @@
 				0A86B0371F26207F00146923 /* SwiftyJSON.swift */,
 				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
 				C61F16EE1EC30B14006281BA /* ViewController.swift */,
-				C61F171A1EC31A43006281BA /* LoginViewController.swift */,
-				C61F171C1EC4B62B006281BA /* RegisterViewController.swift */,
 				0A86B02C1F26008D00146923 /* RestApiManager.swift */,
-				0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */,
-				0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */,
-				0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */,
 				C61F16F01EC30B14006281BA /* Main.storyboard */,
 				C61F16F31EC30B14006281BA /* Assets.xcassets */,
 				C61F16F51EC30B14006281BA /* LaunchScreen.storyboard */,
@@ -548,6 +551,7 @@
 				0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */,
 				0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */,
 				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
+				0AE1CEDE1FCC5D9F00863B35 /* LocationServices.swift in Sources */,
 				C6A41F501FB1C1C30091BFE3 /* EventDetailViewController.swift in Sources */,
 				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
 				C6E559351FC5CDC5009058C8 /* ProfileViewController.swift in Sources */,

@@ -150,7 +150,7 @@ class LoginViewController: UIViewController {
                     self.present(alertController, animated: true, completion:nil)
                 } else {
                     let user = User(json: json["result"])
-                    print(user?.name as! String);
+                    print(user?.name ?? "name");
 
                 }
                     })
@@ -168,6 +168,6 @@ class LoginViewController: UIViewController {
     
     func registerAction()
     {
-        self.present(RegisterViewController(), animated: true, completion: nil)
+        self.performSegue(withIdentifier: "initSegue", sender: self)
     }
 }

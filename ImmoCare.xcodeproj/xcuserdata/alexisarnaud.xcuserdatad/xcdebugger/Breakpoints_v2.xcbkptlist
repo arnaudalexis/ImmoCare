@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImmoCare/RestApiManager.swift"
-            timestampString = "526529186.067298"
+            timestampString = "533666372.96461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "loginUser(_email:_password:onSuccess:onFailure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImmoCare/RestApiManager.swift"
-            timestampString = "526529186.067298"
+            timestampString = "533666924.224976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "loginUser(_email:_password:onSuccess:onFailure:)"
             landmarkType = "7">
          </BreakpointContent>
