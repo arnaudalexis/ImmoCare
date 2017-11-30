@@ -13,27 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set color background
-        self.view.backgroundColor = UIColor(red: 146/255, green: 173/255, blue: 184/155, alpha: 1.0)
-        
         // detect left swipe and use swipeLeft() method
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeLeft(recognizer:)))
         recognizer.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(recognizer)
-        
-//        // set label
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
-//        label.center = CGPoint(x: 180, y: 300)
-//        label.textAlignment = .center
-//        label.text = "ImmoCare"
-//        self.view.addSubview(label)
-        
-//        let circleImg = UIImageView(frame:CGRect(x:0, y:0, width:350, height:100))
-//        circleImg.clipsToBounds = true
-//        circleImg.image = #imageLiteral(resourceName: "logo_immocare")
-//        circleImg.center = self.view.center
-//        circleImg.contentMode = .scaleAspectFit
-//        self.view.addSubview(circleImg)
     }
 
     override func didReceiveMemoryWarning() {

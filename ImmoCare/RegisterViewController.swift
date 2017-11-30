@@ -15,24 +15,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var firstNameField: UITextField!
     
-    @IBAction func loginAction(_ sender: Any) {
-        self.present(LoginViewController(), animated: true, completion: nil)
-    }
-    
     
     var contentViewController = ["vacancier", "bénévole", "auto-entrepreneur"]
 
-    
-    // set left container for pwd and username
-    func getLeftView(image:UIImage) -> UIView
-    {
-        let leftV = UIView(frame:CGRect(x:0, y:0, width:40, height:40))
-        let img = UIImageView(frame:CGRect(x:5, y:5, width:30, height:30))
-        img.image = image
-        leftV.backgroundColor = UIColor(red:0.27, green:0.83, blue:0.76, alpha: 1.0)
-        leftV.addSubview(img)
-        return leftV
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +31,8 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
-        if(firstNameField.text?.characters.count == 0){
-            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre prénom.", preferredStyle: .alert)
+        if(emailField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
             let OKAction = UIAlertAction(title: "OK", style: .default)
@@ -62,8 +47,16 @@ class RegisterViewController: UIViewController {
             alertController.addAction(OKAction)
             self.present(alertController, animated: true, completion:nil)
         }
-        else if(emailField.text?.characters.count == 0){
-            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre adresse mail.", preferredStyle: .alert)
+        else if(passwordField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre mot de passe.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(firstNameField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre prénom.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
             let OKAction = UIAlertAction(title: "OK", style: .default)
@@ -72,14 +65,6 @@ class RegisterViewController: UIViewController {
         }
         else if(!isValidEmailAddress(emailAddressString: emailField.text!)){
             let alertController = UIAlertController(title: "Oops!", message: "Votre adresse mail est invalide.", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            alertController.addAction(cancelAction)
-            let OKAction = UIAlertAction(title: "OK", style: .default)
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion:nil)
-        }
-        else if(passwordField.text?.characters.count == 0){
-            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre mot de passe.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
             let OKAction = UIAlertAction(title: "OK", style: .default)
