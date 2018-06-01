@@ -17,7 +17,7 @@ class AddAdvertViewCtrl: UIViewController {
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height - 100
         let my_view = UIView(frame:CGRect(x:0, y:0, width:screenWidth, height:screenHeight))
-        my_view.backgroundColor = UIColor(red:1, green:1, blue:1, alpha: 1.0)
+        my_view.backgroundColor = UIColor(red:1, green:1, blue:1, alpha: 0.5)
         my_view.contentMode = .scaleAspectFit
         return my_view
     }()
@@ -90,7 +90,7 @@ class AddAdvertViewCtrl: UIViewController {
         let screenHeight = screenSize.height - 100
         
         // set color background
-        self.view.backgroundColor = UIColor(red:1, green:1, blue:1, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red:1, green:1, blue:1, alpha: 0)
         
         // set container
         
@@ -143,11 +143,11 @@ class AddAdvertViewCtrl: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func listAction(){
-        self.present(ListAdvertsViewCtrl(), animated: true, completion:nil)
+    @objc func listAction(){
+        self.present(TableController(), animated: false, completion:nil)
     }
     
-    func postAction()
+    @objc func postAction()
     {
         if(titleField.text?.characters.count == 0){
             let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre titre.", preferredStyle: .alert)
@@ -197,8 +197,14 @@ class AddAdvertViewCtrl: UIViewController {
         }
     }
     
-    func registerAction()
+    func isValidString(str: String) -> Bool
     {
-        self.present(RegisterViewController(), animated: true, completion: nil)
+        do
+        {
+            let regex = try NSRegularExpression(pattern: "^[0-9a-zA-Z\\_]{7,18}$", options: .caseInsensitive)
+            if regex.matches(in: str, options: [], range: NSMakeRange(0, str.characters.count)).count > 0 {return true}
+        }
+        catch {}
+        return false
     }
 }

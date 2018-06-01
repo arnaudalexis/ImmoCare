@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     // change view if left swipe detected
-    func swipeLeft(recognizer : UISwipeGestureRecognizer)
+    @objc func swipeLeft(recognizer : UISwipeGestureRecognizer)
     {
          self.performSegue(withIdentifier: "initSegue", sender: self)
     }
@@ -56,5 +56,22 @@ extension UIImage
             return nil
         }
         self.init(cgImage: cgImage)
+    }
+}
+
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 }

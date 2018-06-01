@@ -1,9 +1,11 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## SideMenu
+## SwiftyJSON
 
-Copyright (c) 2015 Jonathan Kent <contact@jonkent.me>
+The MIT License (MIT)
+
+Copyright (c) 2017 Ruoyu Fu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

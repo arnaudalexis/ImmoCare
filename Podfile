@@ -6,7 +6,8 @@ target 'ImmoCare' do
   use_frameworks!
 
   # Pods for ImmoCare
-  pod ‘SideMenu’
+
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'ImmoCareTests' do
     inherit! :search_paths

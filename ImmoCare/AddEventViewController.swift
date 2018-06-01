@@ -30,7 +30,7 @@ class AddEventViewController: UIViewController {
     } // function getData
     
     // create picker to pick start date
-    func createStartDatePicker() {
+    @objc func createStartDatePicker() {
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -46,7 +46,7 @@ class AddEventViewController: UIViewController {
     } // function createStartDatePicker
     
     // create picker to pick end date
-    func createEndDatePicker() {
+    @objc func createEndDatePicker() {
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -62,7 +62,7 @@ class AddEventViewController: UIViewController {
     } // function createEndDatePicker
     
     // convert start date to string
-    func startDateConverter() {
+    @objc func startDateConverter() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -74,7 +74,7 @@ class AddEventViewController: UIViewController {
     } // func startDateConverter
     
     // convert end date to string
-    func endDateConverter() {
+    @objc func endDateConverter() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none

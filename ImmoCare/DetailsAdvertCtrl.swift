@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
     var idAdvert: String!
-class DetailsAdvertCtrl: UIViewController {
+class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
     
     // container post
     var container: UIView = {
@@ -55,7 +56,7 @@ class DetailsAdvertCtrl: UIViewController {
             DispatchQueue.main.async(execute: {
                 
                 if(json["statusCode"] != 200){
-                    self.present(ListAdvertsViewCtrl(), animated: true, completion:nil)
+                    self.present(TableController(), animated: true, completion:nil)
                 } else {
                     self.titleAd.text = json["result"]["title"].stringValue
                     self.bodyAd.text = json["result"]["body"].stringValue
@@ -64,7 +65,7 @@ class DetailsAdvertCtrl: UIViewController {
         }, onFailure: { error in
             DispatchQueue.main.async(execute: {
                 print(error)
-                self.present(ListAdvertsViewCtrl(), animated: true, completion:nil)
+                self.present(TableController(), animated: true, completion:nil)
             })
         })
     }
@@ -73,6 +74,7 @@ class DetailsAdvertCtrl: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let screenSize: CGRect = UIScreen.main.bounds
         
@@ -104,11 +106,17 @@ class DetailsAdvertCtrl: UIViewController {
         
         // set btn post
         
-        let btnList = UIButton(frame:CGRect(x:40, y:screenHeight-50, width:280, height:40))
+        let btnList = UIButton(frame:CGRect(x:40, y:screenHeight-100, width:280, height:40))
         btnList.setBackgroundImage(UIImage(color:UIColor(red:0.27, green:0.83, blue:0.76, alpha: 1.0)), for: .normal)
         btnList.setTitle("LISTE", for: .normal)
         btnList.addTarget(self, action: #selector(listAction), for: .touchUpInside)
         self.container.addSubview(btnList)
+        
+        let btnMail = UIButton(frame:CGRect(x:40, y:screenHeight-25, width:280, height:40))
+        btnMail.setBackgroundImage(UIImage(color:UIColor(red:0.27, green:0.83, blue:0.76, alpha: 1.0)), for: .normal)
+        btnMail.setTitle("Contacter", for: .normal)
+        btnMail.addTarget(self, action: #selector(sendEmail), for: .touchUpInside)
+        self.container.addSubview(btnMail)
         
         
         // set position container on center
@@ -122,13 +130,30 @@ class DetailsAdvertCtrl: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func listAction(){
-        self.present(ListAdvertsViewCtrl(), animated: true, completion:nil)
+    @objc func listAction(){
+        self.present(TableController(), animated: false, completion:nil)
+    }
+    
+    @objc func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["alexis.arnaud@saaswedo.com"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
     
     func registerAction()
     {
-        self.present(RegisterViewController(), animated: true, completion: nil)
+        self.present(RegisterViewController(), animated: false, completion: nil)
     }
 }

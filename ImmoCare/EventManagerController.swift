@@ -41,7 +41,7 @@ class EventManagerController: UICollectionViewController, UICollectionViewDelega
     
     
     // delete event
-    func deleteEvent(_ sender:UIButton!) {
+    @objc func deleteEvent(_ sender:UIButton!) {
         
         let i : Int = (sender.layer.value(forKey: "index")) as! Int
         print(i);

@@ -101,7 +101,7 @@ class ListAdvertsViewCtrl: UIViewController, UITableViewDataSource, UITableViewD
         self.container.addSubview(btnAdd)
     }
     
-    func addAction(){
+    @objc func addAction(){
         self.present(AddAdvertViewCtrl(), animated: true, completion: nil)
     }
     

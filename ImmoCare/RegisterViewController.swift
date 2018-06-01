@@ -14,6 +14,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
     
     
     var contentViewController = ["vacancier", "bénévole", "auto-entrepreneur"]
@@ -21,7 +23,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboard()
     }
     
 
@@ -71,8 +73,16 @@ class RegisterViewController: UIViewController {
             alertController.addAction(OKAction)
             self.present(alertController, animated: true, completion:nil)
         }
+        else if(phoneField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre téléphone.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
         else{
-            APIManager.sharedInstance.registerUser(_email: emailField.text!, _password: passwordField.text!, _name: nameField.text!, _firstName: firstNameField.text!, _city: "", _country: "", onSuccess: { json in
+            APIManager.sharedInstance.registerUser(_email: emailField.text!, _password: passwordField.text!, _name: nameField.text!, _firstName: firstNameField.text!, _zipcode: cityField.text!, _country: "", _phone: phoneField.text!, onSuccess: { json in
                 if let string = json.rawString() {
                     print(string)
                 }
@@ -125,5 +135,6 @@ class RegisterViewController: UIViewController {
         
         return  returnValue
     }
+
     
 }

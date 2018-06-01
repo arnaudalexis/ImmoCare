@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         //show keyboard
         self.emailField.becomeFirstResponder()
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,8 +64,9 @@ class LoginViewController: UIViewController {
                     alertController.addAction(OKAction)
                     self.present(alertController, animated: true, completion:nil)
                 } else {
-                    let user = User(json: json["result"])
-                    print(user?.name ?? "name");
+                    let user = User.sharedInstanceWith(json: json["result"])
+                    print(user.name ?? "name");
+                    self.performSegue(withIdentifier: "profileSegue", sender: self)
 
                 }
                     })

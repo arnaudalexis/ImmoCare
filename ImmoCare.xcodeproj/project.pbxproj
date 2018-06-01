@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1EB61020ADCEE300B4018C /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EB60F20ADCEE300B4018C /* MenuBar.swift */; };
+		0A35466120C0A9E1005FD223 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A35465F20C0A9E1005FD223 /* PinAnnotation.swift */; };
+		0A35466220C0A9E1005FD223 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A35466020C0A9E1005FD223 /* MapViewController.swift */; };
 		0A86B02D1F26008D00146923 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B02C1F26008D00146923 /* RestApiManager.swift */; };
-		0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
-		0A86B0391F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
-		0A86B03A1F26207F00146923 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86B0371F26207F00146923 /* SwiftyJSON.swift */; };
 		0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */; };
-		0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */; };
 		0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAD1F98991F00999EEC /* Advert.swift */; };
 		0AD93DB01F9899BA00999EEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD93DAF1F9899BA00999EEC /* User.swift */; };
+		0ADB156E20AECA6900BA9446 /* AddConstraintsWithFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB156D20AECA6900BA9446 /* AddConstraintsWithFormat.swift */; };
+		0ADB15A620AED37200BA9446 /* Pods_ImmoCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADB15A520AED37200BA9446 /* Pods_ImmoCare.framework */; };
+		0ADB15A820AED3BA00BA9446 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADB15A720AED3BA00BA9446 /* SwiftyJSON.framework */; };
 		0AE1CEDE1FCC5D9F00863B35 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1CEDD1FCC5D9F00863B35 /* LocationServices.swift */; };
+		0AE1CEE01FD0DCFC00863B35 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1CEDF1FD0DCFB00863B35 /* TableController.swift */; };
 		0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */; };
 		0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */; };
 		1DFAF21B5D2027C3385219BB /* Pods_ImmoCareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */; };
@@ -39,7 +42,6 @@
 		C6A41F5D1FB1C1DE0091BFE3 /* ListOfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F591FB1C1DE0091BFE3 /* ListOfEvents.swift */; };
 		C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A41F5A1FB1C1DE0091BFE3 /* Data.swift */; };
 		C6E559351FC5CDC5009058C8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E559341FC5CDC5009058C8 /* ProfileViewController.swift */; };
-		EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,13 +64,19 @@
 /* Begin PBXFileReference section */
 		04F016EE35031CEE43A98CEC /* Pods-ImmoCareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests.release.xcconfig"; sourceTree = "<group>"; };
 		088CA6DDC6CB168859F0AA2F /* Pods-ImmoCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare.release.xcconfig"; sourceTree = "<group>"; };
+		0A1EB60F20ADCEE300B4018C /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		0A35465F20C0A9E1005FD223 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		0A35466020C0A9E1005FD223 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A86B02C1F26008D00146923 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
-		0A86B0371F26207F00146923 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0AC9BEFC1F619AD500402C7A /* AddAdvertViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdvertViewCtrl.swift; sourceTree = "<group>"; };
-		0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsCtrl.swift; sourceTree = "<group>"; };
 		0AD93DAD1F98991F00999EEC /* Advert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
 		0AD93DAF1F9899BA00999EEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0ADB156D20AECA6900BA9446 /* AddConstraintsWithFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConstraintsWithFormat.swift; sourceTree = "<group>"; };
+		0ADB15A320AED20C00BA9446 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB15A520AED37200BA9446 /* Pods_ImmoCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ImmoCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB15A720AED3BA00BA9446 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE1CEDD1FCC5D9F00863B35 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
+		0AE1CEDF1FD0DCFB00863B35 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		0AE1D8E81F61E278003DBEF9 /* ListAdvertsViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdvertsViewCtrl.swift; sourceTree = "<group>"; };
 		0AE1D8F21F622D4C003DBEF9 /* DetailsAdvertCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAdvertCtrl.swift; sourceTree = "<group>"; };
 		15914C80590E4BD4D2C8C0CF /* Pods-ImmoCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmoCareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBC72FAC49F93BA1AD424772 /* Pods_ImmoCare.framework in Frameworks */,
+				0ADB15A820AED3BA00BA9446 /* SwiftyJSON.framework in Frameworks */,
+				0ADB15A620AED37200BA9446 /* Pods_ImmoCare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +145,9 @@
 		0A86B0331F261F7700146923 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ADB15A720AED3BA00BA9446 /* SwiftyJSON.framework */,
+				0ADB15A520AED37200BA9446 /* Pods_ImmoCare.framework */,
+				0ADB15A320AED20C00BA9446 /* SwiftyJSON.framework */,
 				F886C5E6EAC19AB28A779EA3 /* Pods_ImmoCare.framework */,
 				37D975F364703A4B35E6A297 /* Pods_ImmoCareTests.framework */,
 				7976338F1C777603BE73666D /* Pods_ImmoCareUITests.framework */,
@@ -148,6 +160,7 @@
 			children = (
 				C6A41F531FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift */,
 				C6A41F541FB1C1D10091BFE3 /* EventCollectionViewCell.swift */,
+				0A1EB60F20ADCEE300B4018C /* MenuBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -168,7 +181,9 @@
 		0AD93DA81F97AFF300999EEC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0AD93DAB1F98985300999EEC /* ListAdvertsCtrl.swift */,
+				0A35466020C0A9E1005FD223 /* MapViewController.swift */,
+				0A35465F20C0A9E1005FD223 /* PinAnnotation.swift */,
+				0AE1CEDF1FD0DCFB00863B35 /* TableController.swift */,
 				C6A41F4D1FB1C1C30091BFE3 /* EventDetailViewController.swift */,
 				C6A41F4E1FB1C1C30091BFE3 /* AddEventViewController.swift */,
 				C6A41F4F1FB1C1C30091BFE3 /* EventManagerController.swift */,
@@ -224,8 +239,8 @@
 				0AD93DA81F97AFF300999EEC /* Controller */,
 				0AD93DA71F97AFED00999EEC /* Model */,
 				0AD93DA61F97ACAB00999EEC /* View */,
-				0A86B0371F26207F00146923 /* SwiftyJSON.swift */,
 				C61F16EC1EC30B14006281BA /* AppDelegate.swift */,
+				0ADB156D20AECA6900BA9446 /* AddConstraintsWithFormat.swift */,
 				C61F16EE1EC30B14006281BA /* ViewController.swift */,
 				0A86B02C1F26008D00146923 /* RestApiManager.swift */,
 				C61F16F01EC30B14006281BA /* Main.storyboard */,
@@ -266,7 +281,6 @@
 				C61F16E61EC30B14006281BA /* Frameworks */,
 				C61F16E71EC30B14006281BA /* Resources */,
 				28A9A5FF46D3A473B4AD67D7 /* [CP] Embed Pods Frameworks */,
-				2870EF3D21904F3A8523EDF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,8 +299,6 @@
 				C61F16F91EC30B15006281BA /* Sources */,
 				C61F16FA1EC30B15006281BA /* Frameworks */,
 				C61F16FB1EC30B15006281BA /* Resources */,
-				FE21432705C8AD1E118D690A /* [CP] Embed Pods Frameworks */,
-				31A4F058E02278E3664CEF16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,8 +318,6 @@
 				C61F17041EC30B15006281BA /* Sources */,
 				C61F17051EC30B15006281BA /* Frameworks */,
 				C61F17061EC30B15006281BA /* Resources */,
-				019E59E15EF12BA73AA3F137 /* [CP] Embed Pods Frameworks */,
-				F4D87048849792F0E923D93F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,15 +341,18 @@
 				TargetAttributes = {
 					C61F16E81EC30B14006281BA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = F92G7G5525;
 						ProvisioningStyle = Automatic;
 					};
 					C61F16FC1EC30B15006281BA = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C61F16E81EC30B14006281BA;
 					};
 					C61F17071EC30B15006281BA = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C61F16E81EC30B14006281BA;
 					};
@@ -393,36 +406,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		019E59E15EF12BA73AA3F137 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2870EF3D21904F3A8523EDF4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		28A9A5FF46D3A473B4AD67D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,30 +413,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCare/Pods-ImmoCare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31A4F058E02278E3664CEF16 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F3121EEC6FC00EBE8B06408 /* [CP] Check Pods Manifest.lock */ = {
@@ -510,36 +478,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4D87048849792F0E923D93F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareUITests/Pods-ImmoCareUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE21432705C8AD1E118D690A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmoCareTests/Pods-ImmoCareTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -548,22 +486,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6A41F561FB1C1D10091BFE3 /* EventCollectionViewCell.swift in Sources */,
-				0AD93DAC1F98985300999EEC /* ListAdvertsCtrl.swift in Sources */,
 				0AE1D8F31F622D4C003DBEF9 /* DetailsAdvertCtrl.swift in Sources */,
-				0A86B0381F26207F00146923 /* SwiftyJSON.swift in Sources */,
+				0A1EB61020ADCEE300B4018C /* MenuBar.swift in Sources */,
 				0AE1CEDE1FCC5D9F00863B35 /* LocationServices.swift in Sources */,
 				C6A41F501FB1C1C30091BFE3 /* EventDetailViewController.swift in Sources */,
 				0AE1D8E91F61E278003DBEF9 /* ListAdvertsViewCtrl.swift in Sources */,
 				C6E559351FC5CDC5009058C8 /* ProfileViewController.swift in Sources */,
 				C6A41F5C1FB1C1DE0091BFE3 /* Event.swift in Sources */,
+				0AE1CEE01FD0DCFC00863B35 /* TableController.swift in Sources */,
 				C6A41F5E1FB1C1DE0091BFE3 /* Data.swift in Sources */,
 				0AC9BEFD1F619AD500402C7A /* AddAdvertViewCtrl.swift in Sources */,
 				C61F171B1EC31A43006281BA /* LoginViewController.swift in Sources */,
 				C61F16EF1EC30B14006281BA /* ViewController.swift in Sources */,
 				0AD93DAE1F98991F00999EEC /* Advert.swift in Sources */,
 				0AD93DB01F9899BA00999EEC /* User.swift in Sources */,
+				0ADB156E20AECA6900BA9446 /* AddConstraintsWithFormat.swift in Sources */,
 				C61F16ED1EC30B14006281BA /* AppDelegate.swift in Sources */,
+				0A35466120C0A9E1005FD223 /* PinAnnotation.swift in Sources */,
 				C6A41F521FB1C1C30091BFE3 /* EventManagerController.swift in Sources */,
+				0A35466220C0A9E1005FD223 /* MapViewController.swift in Sources */,
 				C6A41F5B1FB1C1DE0091BFE3 /* EventHandler.swift in Sources */,
 				C6A41F511FB1C1C30091BFE3 /* AddEventViewController.swift in Sources */,
 				C6A41F551FB1C1D10091BFE3 /* EventTitleCollectionReusableView.swift in Sources */,
@@ -578,7 +519,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61F17021EC30B15006281BA /* ImmoCareTests.swift in Sources */,
-				0A86B0391F26207F00146923 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +527,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61F170D1EC30B15006281BA /* ImmoCareUITests.swift in Sources */,
-				0A86B03A1F26207F00146923 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -712,7 +651,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -726,11 +665,12 @@
 			baseConfigurationReference = F1DD03047D714F8FD6DAA06B /* Pods-ImmoCare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F92G7G5525;
 				INFOPLIST_FILE = ImmoCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
+				PRODUCT_BUNDLE_IDENTIFIER = immocare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -740,11 +680,12 @@
 			baseConfigurationReference = 088CA6DDC6CB168859F0AA2F /* Pods-ImmoCare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F92G7G5525;
 				INFOPLIST_FILE = ImmoCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCare;
+				PRODUCT_BUNDLE_IDENTIFIER = immocare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -759,7 +700,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImmoCare.app/ImmoCare";
 			};
 			name = Debug;
@@ -774,7 +716,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImmoCare.app/ImmoCare";
 			};
 			name = Release;
@@ -788,7 +731,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = ImmoCare;
 			};
 			name = Debug;
@@ -802,7 +746,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = etna.ImmoCareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = ImmoCare;
 			};
 			name = Release;
