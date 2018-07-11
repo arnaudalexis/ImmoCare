@@ -7,7 +7,7 @@ target 'ImmoCare' do
 
   # Pods for ImmoCare
 
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.1.0'
 
   target 'ImmoCareTests' do
     inherit! :search_paths

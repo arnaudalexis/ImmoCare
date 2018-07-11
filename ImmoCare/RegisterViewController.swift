@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var cityField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var realCityField: UITextField!
     
     
     var contentViewController = ["vacancier", "bénévole", "auto-entrepreneur"]
@@ -59,6 +60,14 @@ class RegisterViewController: UIViewController {
         }
         else if(firstNameField.text?.characters.count == 0){
             let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre prénom.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            let OKAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+        else if(realCityField.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Oops!", message: "Rentrez votre ville.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
             let OKAction = UIAlertAction(title: "OK", style: .default)

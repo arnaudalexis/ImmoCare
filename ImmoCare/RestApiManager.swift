@@ -11,7 +11,8 @@ import SwiftyJSON
 
 class APIManager {
     
-    let baseURL = "http://172.16.24.121:3000"
+    //let baseURL = "http://172.16.24.121:3000"
+    let baseURL = "http://192.168.4.39:3000"
     static let sharedInstance = APIManager()
     static let registerEndpoint = "/register/"
     static let loginEndpoint = "/login/"

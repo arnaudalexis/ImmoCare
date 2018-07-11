@@ -42,4 +42,14 @@ class ProfileViewController: UIViewController {
         view.addConstraintsWithFormat("V:[v0(50)]|", views: menuBar)
     }
     
+    // edit profile btn
+    @IBAction func editProfileBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "editProfileSegue", sender: self)
+    }
+    
+    // logout btn
+    @IBAction func logoutBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "logoutSegue", sender: self)
+    }
+    
 } // class

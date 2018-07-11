@@ -12,6 +12,8 @@ import CoreLocation
 import Foundation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    var selectedAnnotation: PinAnnotation?
 
     @IBOutlet weak var switchRole: UILabel!
     @IBOutlet weak var travelRadius: UILabel!
@@ -129,7 +131,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                                     print(note)
                                     // add annotation on map
                                     let loc = CLLocationCoordinate2DMake(lat as! CLLocationDegrees, lon as! CLLocationDegrees)
-                                    let pin = PinAnnotation(title: name as! String, subtitle: note as! String, coordinate: loc)
+                                    let pin = PinAnnotation(title: name as! String, subtitle: note as! String, coordinate: loc, data: userPin as! String)
                                     pin.userDistance = self.userDistance(lat: lat as! Double, lon: lon as! Double)
                                     self.mapView.addAnnotation(pin)
                                 }
@@ -154,6 +156,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         annotationView.canShowCallout = true
         annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
+        
+        
         let pinAnnotation = annotation as! PinAnnotation
         
         //annotationView.detailCalloutAccessoryView = UIImageView(image: pinAnnotation.image)
@@ -167,8 +171,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return annotationView
     }
     
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        self.selectedAnnotation = view.annotation as? PinAnnotation
+    }
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         //let annview = view.annotation
+        if control == view.rightCalloutAccessoryView {
+            print(view.annotation?.title! as Any)
+            performSegue(withIdentifier: "moreDetail", sender: self)
+        }
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "moreDetail") {
+            // pass data to next view
+            let destViewController:PinProfileViewController = segue.destination as! PinProfileViewController
+            destViewController.viaSegue = (sender as! MKAnnotationView)
+        }
     }
     
     // calcul user's distance to the specified point.
