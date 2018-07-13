@@ -14,9 +14,9 @@ class PinAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var userDistance: String?
     var image: UIImage?
-    var data: String?
+    var data: AnyObject?
     
-    init(title : String, subtitle: String, coordinate: CLLocationCoordinate2D, data: String) {
+    init(title : String, subtitle: String, coordinate: CLLocationCoordinate2D, data: AnyObject) {
         self.title = title
         self.subtitle = subtitle
         self.coordinate = coordinate

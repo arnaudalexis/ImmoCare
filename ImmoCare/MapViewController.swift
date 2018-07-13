@@ -76,13 +76,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // parse and add keeper's pin on map
     func parseKeeper() {
         // get data keepers from api
-        createAnnotation(urlString: "http://172.16.24.121:3000/watchmanlist?param=")
+        createAnnotation(urlString: "http://192.168.1.15:3000/watchmanlist?param=")
     }
     
     // // parse and add vacationer's pin on map
     func parseVacationer() {
         // get data vacationers from api
-        createAnnotation(urlString: "http://172.16.24.121:3000/vacancionerlist?param=")
+        createAnnotation(urlString: "http://192.168.1.15:3000/vacancionerlist?param=")
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,7 +100,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let url = URL(string: urlString)
         
         let urlRequest = URLRequest(url: url!)
-        print(HTTPCookieStorage.shared.cookies)
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             let httpResponse = response as! HTTPURLResponse
             let statusCode = httpResponse.statusCode
@@ -117,7 +116,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         print(myJson)
                         
                         // parse json by getting users key
-                        if let userPins = myJson["users"] as? [[String: AnyObject]] {
+                        if let userPins = myJson as? [[String: AnyObject]] {
                             for userPin in userPins {
                                 if let latitude = userPin["Geo_latitude"] as Any?, let longitude = userPin["Geo_longitude"] as Any?, let firstname = userPin["firstname"] as Any?, let note = userPin["note"] as Any?{
                                     let lat = latitude
@@ -131,7 +130,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                                     print(note)
                                     // add annotation on map
                                     let loc = CLLocationCoordinate2DMake(lat as! CLLocationDegrees, lon as! CLLocationDegrees)
-                                    let pin = PinAnnotation(title: name as! String, subtitle: note as! String, coordinate: loc, data: userPin as! String)
+                                    let pin = PinAnnotation(title: name as! String, subtitle: note, coordinate: loc, data: userPin as AnyObject)
                                     pin.userDistance = self.userDistance(lat: lat as! Double, lon: lon as! Double)
                                     self.mapView.addAnnotation(pin)
                                 }
