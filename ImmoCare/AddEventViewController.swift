@@ -11,7 +11,7 @@ class AddEventViewController: UIViewController {
     let startPicker = UIDatePicker()
     let endPicker = UIDatePicker()
     
-    var data: Data?
+    var data: DataList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class AddEventViewController: UIViewController {
     }
     
     // get event's data
-    func getData(data: Data) {
+    func getData(data: DataList) {
         self.data = data
     } // function getData
     

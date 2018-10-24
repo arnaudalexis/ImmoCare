@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 
 
@@ -57,19 +58,27 @@ class LoginViewController: UIViewController {
                 }
                 DispatchQueue.main.async(execute: {
                     
-                
-                if(json["statusCode"] != 200){
-                    let alertController = UIAlertController(title: "Oops!", message: "Utilisateur introuvable", preferredStyle: .alert)
-                    let OKAction = UIAlertAction(title: "OK", style: .default)
-                    alertController.addAction(OKAction)
-                    self.present(alertController, animated: true, completion:nil)
-                } else {
-                    let user = User.sharedInstanceWith(json: json["result"])
-                    print(user.name ?? "name");
-                    self.performSegue(withIdentifier: "profileSegue", sender: self)
-
-                }
-                    })
+                    if(json["statusCode"] != 200){
+                        let alertController = UIAlertController(title: "Oops!", message: "Utilisateur introuvable", preferredStyle: .alert)
+                        let OKAction = UIAlertAction(title: "OK", style: .default)
+                        alertController.addAction(OKAction)
+                        self.present(alertController, animated: true, completion:nil)
+                    } else {
+                        let myJson:Dictionary<String, Any> = [:]
+                        APIManager.sharedInstance.getMyProfile(_json: myJson, onSuccess: { json in
+                            if let string = json.rawString() {
+                                print(string)
+                            }
+                            DispatchQueue.main.async(execute: {
+                                let user = User.sharedInstanceWith(json: json["result"])
+                                print(user.name);
+                                self.performSegue(withIdentifier: "profileSegue", sender: self)
+                            })
+                        }, onFailure: { error in
+                            
+                        })
+                    }
+                })
             }, onFailure: { error in
                 DispatchQueue.main.async(execute: {
                 print(error)

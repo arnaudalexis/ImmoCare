@@ -9,23 +9,32 @@
 import UIKit
 import MapKit
 
-class PinProfileViewController: UITableViewController, MKMapViewDelegate {
+class PinProfileViewController: UIViewController {
     
     var viaSegue = MKAnnotationView()
     var dataDict:[String:String] = [:]
+    var nameStr:String = ""
+    var cityStr:String = ""
+    var emailStr:String = ""
+    var numberStr:String = ""
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        nameLabel.text = nameStr
+        cityLabel.text = cityStr
+        emailLabel.text = emailStr
+        numberLabel.text = numberStr
+    }
+    
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
     }
     
-    
-    @IBAction func backBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }

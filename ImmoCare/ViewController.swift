@@ -13,10 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // detect left swipe and use swipeLeft() method
-        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeLeft(recognizer:)))
-        recognizer.direction = UISwipeGestureRecognizerDirection.left
-        self.view.addGestureRecognizer(recognizer)
+        
+        _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     // change view if left swipe detected
-    @objc func swipeLeft(recognizer : UISwipeGestureRecognizer)
+    @objc func timeToMoveOn()
     {
          self.performSegue(withIdentifier: "initSegue", sender: self)
     }

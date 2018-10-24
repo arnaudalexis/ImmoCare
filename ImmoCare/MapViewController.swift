@@ -11,9 +11,14 @@ import MapKit
 import CoreLocation
 import Foundation
 
+
+var idUser:String!
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var selectedAnnotation: PinAnnotation?
+    var selName:String = ""
+    var selCity:String = ""
+    var selEmail:String = ""
 
     @IBOutlet weak var switchRole: UILabel!
     @IBOutlet weak var travelRadius: UILabel!
@@ -76,13 +81,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // parse and add keeper's pin on map
     func parseKeeper() {
         // get data keepers from api
-        createAnnotation(urlString: "http://192.168.1.15:3000/watchmanlist?param=")
+        createAnnotation(urlString: Constants.apiBaseUrl + "/watchmanlist?param=")
     }
     
     // // parse and add vacationer's pin on map
     func parseVacationer() {
         // get data vacationers from api
-        createAnnotation(urlString: "http://192.168.1.15:3000/vacancionerlist?param=")
+        createAnnotation(urlString: Constants.apiBaseUrl + "/vacancionerlist?param=")
     }
 
     override func didReceiveMemoryWarning() {
@@ -178,17 +183,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         //let annview = view.annotation
         if control == view.rightCalloutAccessoryView {
             print(view.annotation?.title! as Any)
-            performSegue(withIdentifier: "moreDetail", sender: self)
+            let thisAnnot = view.annotation as! PinAnnotation
+            idUser = String(format: "%@", thisAnnot.data!["id"] as! NSNumber)
+            print(idUser)
+            APIManager.sharedInstance.getUserProfile(_id: idUser, onSuccess: { json in
+                if let string = json.rawString() {
+                    print(string)
+                }
+                DispatchQueue.main.async(execute: {
+                    self.selName = json["name"].stringValue;
+                    self.selCity = json["city"].stringValue;
+                    self.selEmail = json["email"].stringValue;
+                    self.performSegue(withIdentifier: "moreDetail", sender: self)
+                })
+            }, onFailure: { error in
+                
+            })
         }
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "moreDetail") {
-            // pass data to next view
-            let destViewController:PinProfileViewController = segue.destination as! PinProfileViewController
-            destViewController.viaSegue = (sender as! MKAnnotationView)
-        }
-    }
+//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if (segue.identifier == "moreDetail") {
+//            // pass data to next view
+//            let destViewController:PinProfileViewController = segue.destination as! PinProfileViewController
+//            destViewController.viaSegue = (sender as! MKAnnotationView)
+//        }
+//    }
     
     // calcul user's distance to the specified point.
     private func userDistance(lat: Double, lon: Double) -> String? {
@@ -230,6 +250,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView.region = currentRegion
         
         travelRadius.text = "\(Int(round(km))) Km"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if (segue.identifier == "moreDetail")
+        {
+            let vc = segue.destination as? PinProfileViewController
+            vc?.nameStr = selName
+            vc?.cityStr = selCity
+            vc?.emailStr = selEmail
+            vc?.numberStr = ""
+        }
     }
 }
 

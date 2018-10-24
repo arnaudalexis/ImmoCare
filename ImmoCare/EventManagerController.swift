@@ -3,7 +3,7 @@ import UIKit
 
 class EventManagerController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var data = Data()
+    var data = DataList()
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView?.reloadData()

@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         cityLabel.text = user.city
         emailLabel.text = user.email
         phoneLabel.text = user.phone
-        setupMenuBar()
+        //setupMenuBar()
     }
     
     let menuBar : MenuBar = {

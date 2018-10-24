@@ -1,6 +1,6 @@
 import Foundation
 
-class Data {
+class DataList {
     
     // return event's data array
     var eventsList: [ListOfEvents] = {
