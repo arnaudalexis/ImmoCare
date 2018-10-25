@@ -26,17 +26,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var swicther: UISwitch!
     
+    var regionHasBeenCentered = false
     let locationManager = CLLocationManager()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
-        
-        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        //let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(48.859, 2.341)
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(userLocation, span)
-        
-        mapView.setRegion(region, animated: true)
+        if !regionHasBeenCentered {
+            let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+            let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+            //let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(48.859, 2.341)
+            let region: MKCoordinateRegion = MKCoordinateRegionMake(userLocation, span)
+            
+            mapView.setRegion(region, animated: true)
+            regionHasBeenCentered = true
+        }
         
         self.mapView.showsUserLocation = true
         
@@ -52,7 +55,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMenuBar()
+        //setupMenuBar()
         sliderChanged(self)
         
         locationManager.delegate = self
@@ -191,10 +194,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     print(string)
                 }
                 DispatchQueue.main.async(execute: {
-                    self.selName = json["name"].stringValue;
-                    self.selCity = json["city"].stringValue;
-                    self.selEmail = json["email"].stringValue;
-                    self.performSegue(withIdentifier: "moreDetail", sender: self)
+                    self.selName = json["result"]["name"].stringValue;
+                    self.selCity = json["result"]["city"].stringValue;
+                    self.selEmail = json["result"]["email"].stringValue;
+                    self.performSegue(withIdentifier: "userProfile", sender: self)
                 })
             }, onFailure: { error in
                 
@@ -254,7 +257,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if (segue.identifier == "moreDetail")
+        if (segue.identifier == "userProfile")
         {
             let vc = segue.destination as? PinProfileViewController
             vc?.nameStr = selName

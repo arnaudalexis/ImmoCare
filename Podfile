@@ -8,6 +8,8 @@ target 'ImmoCare' do
   # Pods for ImmoCare
 
   pod 'SwiftyJSON', '~> 4.1.0'
+  pod 'TagListView', '~> 1.0'
+  pod 'SwiftMultiSelect'
 
   target 'ImmoCareTests' do
     inherit! :search_paths

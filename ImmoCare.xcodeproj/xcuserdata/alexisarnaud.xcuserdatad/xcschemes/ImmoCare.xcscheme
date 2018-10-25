@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C61F16E81EC30B14006281BA"
                BuildableName = "ImmoCare.app"
                BlueprintName = "ImmoCare"
-               ReferencedContainer = "container:ImmoCare.xcodeproj">
+               ReferencedContainer = "container:Immocare.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C61F16FC1EC30B15006281BA"
                BuildableName = "ImmoCareTests.xctest"
                BlueprintName = "ImmoCareTests"
-               ReferencedContainer = "container:ImmoCare.xcodeproj">
+               ReferencedContainer = "container:Immocare.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "C61F17071EC30B15006281BA"
                BuildableName = "ImmoCareUITests.xctest"
                BlueprintName = "ImmoCareUITests"
-               ReferencedContainer = "container:ImmoCare.xcodeproj">
+               ReferencedContainer = "container:Immocare.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "C61F16E81EC30B14006281BA"
             BuildableName = "ImmoCare.app"
             BlueprintName = "ImmoCare"
-            ReferencedContainer = "container:ImmoCare.xcodeproj">
+            ReferencedContainer = "container:Immocare.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "C61F16E81EC30B14006281BA"
             BuildableName = "ImmoCare.app"
             BlueprintName = "ImmoCare"
-            ReferencedContainer = "container:ImmoCare.xcodeproj">
+            ReferencedContainer = "container:Immocare.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "C61F16E81EC30B14006281BA"
             BuildableName = "ImmoCare.app"
             BlueprintName = "ImmoCare"
-            ReferencedContainer = "container:ImmoCare.xcodeproj">
+            ReferencedContainer = "container:Immocare.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

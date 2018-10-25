@@ -13,7 +13,7 @@ class PinProfileViewController: UIViewController {
     
     var viaSegue = MKAnnotationView()
     var dataDict:[String:String] = [:]
-    var nameStr:String = ""
+    var nameStr:String = "nom"
     var cityStr:String = ""
     var emailStr:String = ""
     var numberStr:String = ""

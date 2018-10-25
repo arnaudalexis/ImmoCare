@@ -5,12 +5,19 @@
 
 import UIKit
 import SwiftyJSON
+import TagListView
 
 class MyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellDateLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
+    @IBOutlet weak var cellCodePostal: UILabel!
+    @IBOutlet weak var cellVille: UILabel!
+    @IBOutlet weak var cellCreateur: UILabel!
+    @IBOutlet weak var tagList: TagListView!
+    @IBOutlet weak var tagType: TagListView!
+    @IBOutlet weak var bandeauView: UIImageView!
     
 }
 
@@ -21,6 +28,13 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
         let title : String
         let date : String
         let image : String
+        let tags : String
+        let idUser : String
+        let username : String
+        let cp : String
+        let ville : String
+        let type : Int
+        let email : String
     }
     
 
@@ -31,6 +45,12 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     var selBody:String = ""
     var selTitle:String = ""
     var selImage:UIImage = #imageLiteral(resourceName: "immocare")
+    var selTags:String = ""
+    var selName:String = ""
+    var selCP:String = ""
+    var selVille:String = ""
+    var selType:Int = 0
+    var selMail:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +90,19 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
         let item = items[indexPath.row]
         cell.cellTitleLabel?.text = item.title
         cell.cellDateLabel?.text = item.date
+        cell.cellCodePostal?.text = item.cp
+        cell.cellVille?.text = item.ville
+        cell.cellCreateur?.text = item.username
+        
         let decodedimage = UIImage(named: item.image)
         cell.cellImageView?.image = decodedimage
+        let tags = (item.tags.count > 0 ? item.tags.components(separatedBy: ",") : ["Animal", "Chez moi", "Plante"])
+        cell.tagList.removeAllTags()
+        cell.tagList.addTags(tags)
+        cell.tagType.removeAllTags()
+        let tag = cell.tagType.addTag((item.type == 0 ? "Vacancier" : "Gardien"))
+        tag.tagBackgroundColor = (item.type == 0 ? UIColor(red:117/255, green:253/255, blue:206/255, alpha: 1) : UIColor(red:251/255, green:104/255, blue:109/255, alpha: 1))
+        cell.bandeauView.backgroundColor = (item.type == 0 ? UIColor(red:117/255, green:253/255, blue:206/255, alpha: 1) : UIColor(red:251/255, green:104/255, blue:109/255, alpha: 1))
         if(item.image != "") {
 //            let base64Str = item.image
 //            let decodedData = Data(base64Encoded: base64Str, options: .ignoreUnknownCharacters)
@@ -87,6 +118,7 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     {
         print("User selected table row \(indexPath.row) and item \(items[indexPath.row].id)")
         idAdvert = items[indexPath.row].id
+        let item = items[indexPath.row]
         APIManager.sharedInstance.getAdvert(_id: idAdvert!, onSuccess: { json in
             if let string = json.rawString() {
                 print(string)
@@ -102,6 +134,12 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
                         self.selTitle = json["result"]["title"].stringValue;
                         print(self.items[indexPath.row].image)
                         self.selImage = UIImage(named: self.items[indexPath.row].image)!
+                        self.selTags = item.tags
+                        self.selName = item.username
+                        self.selVille = item.ville
+                        self.selCP = item.cp
+                        self.selType = item.type
+                        self.selMail = item.email
                         self.performSegue(withIdentifier: "DetailsAdvertCtrl", sender: self)
                     }
                 }
@@ -132,13 +170,34 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
             
             let number = Int(arc4random_uniform(3))
             let image = images[number]
-            let item = Item(id: id, title: title, date: date, image: image)
-            self.items.append(item)
+            let tags = (aItem["tags"].stringValue.count > 0 ? aItem["tags"].stringValue : "Animal,Chez moi,Plante")
+            let idUser = aItem["id_user"].stringValue
+            APIManager.sharedInstance.getUserProfile(_id: idUser, onSuccess: { json in
+                if let string = json.rawString() {
+                    print(string)
+                }
+                let firstname = json["result"]["firstname"].stringValue
+                let city = json["result"]["city"].stringValue
+                let cp = json["result"]["zipcode"].stringValue
+                let type = json["result"]["type"].intValue
+                let email = json["result"]["email"].stringValue
+                let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: firstname, cp: cp, ville: city, type: type, email: email)
+                self.items.append(item)
+                print(item)
+                if(self.items.count == data_list.count){
+                    DispatchQueue.main.async(execute: {self.do_table_refresh()})
+                }
+            }, onFailure: { error in
+                DispatchQueue.main.async(execute: {
+                    let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: "", cp: "", ville: "", type: 0, email: "")
+                    self.items.append(item)
+                })
+            })
         }
         
         
+        //DispatchQueue.main.async(execute: {self.do_table_refresh()})
         
-        DispatchQueue.main.async(execute: {self.do_table_refresh()})
 
     }
 
@@ -157,6 +216,11 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
             vc?.body = selBody
             vc?.titleAdvert = selTitle
             vc?.image = selImage
+            vc?.tags = selTags
+            vc?.city = selVille
+            vc?.name = selName
+            vc?.cp = selCP
+            vc?.email = selMail
         }
     }
 
