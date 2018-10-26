@@ -20,6 +20,8 @@ class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
     var cp:String = ""
     var tags:String = ""
     var email:String = ""
+    var type:String = ""
+    var idUser:Int = 0
     
     @IBOutlet weak var titleAd: UILabel!
     @IBOutlet weak var bodyAd: UITextView!
@@ -28,6 +30,7 @@ class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var cityUser: UILabel!
     @IBOutlet weak var cpUser: UILabel!
+    @IBOutlet weak var mailButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,6 +41,7 @@ class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = User.sharedInstance
         let tagArray = tags.components(separatedBy: ",")
         print(body)
         titleAd.text = titleAdvert
@@ -47,6 +51,17 @@ class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
         cityUser.text = city
         cpUser.text = cp
         tagList.addTags(tagArray)
+        print(user.id)
+        print(idUser)
+        if(user.id == idUser) {
+            mailButton.isEnabled = false
+            mailButton.setTitle("C'est votre annonce", for: .normal)
+        } else {
+            mailButton.isEnabled = true
+            mailButton.setTitle("Contacter le créateur", for: .normal)
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,7 +118,7 @@ class DetailsAdvertCtrl: UIViewController, MFMailComposeViewControllerDelegate {
             vc?.nameStr = name
             vc?.cityStr = city
             vc?.emailStr = email
-            vc?.numberStr = ""
+            vc?.typeStr = type
         }
     }
     

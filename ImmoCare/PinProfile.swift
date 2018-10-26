@@ -16,20 +16,19 @@ class PinProfileViewController: UIViewController {
     var nameStr:String = "nom"
     var cityStr:String = ""
     var emailStr:String = ""
-    var numberStr:String = ""
+    var typeStr:String = ""
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nameLabel.text = nameStr
         cityLabel.text = cityStr
         emailLabel.text = emailStr
-        numberLabel.text = numberStr
+        typeLabel.text = typeStr
     }
     
     

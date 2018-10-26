@@ -56,7 +56,7 @@ class User {
         self.email = ""
         self.city = ""
         self.creation_date = ""
-        self.type = -1
+        self.type = 0
         self.note = -1
         self.nb_note = -1
         self.phone = ""

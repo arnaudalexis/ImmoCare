@@ -21,7 +21,7 @@ class APIManager {
     static let addEventEndpoint = "/addEvent/"
     static let getUserProfile = "/user/"
     
-    func registerUser(_email: String, _password: String, _name: String, _firstName: String, _zipcode: String, _country: String, _phone: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
+    func registerUser(_email: String, _password: String, _name: String, _firstName: String, _zipcode: String, _country: String, _type: Int, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
         guard let url = URL(string: baseURL + APIManager.registerEndpoint) else {
             print("Error: cannot create URL")
             return
@@ -29,7 +29,7 @@ class APIManager {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         
-        let dict = ["email": _email, "password": _password, "firstname": _firstName, "name": _name, "zipcode": _zipcode, "country": _country, "phone": _phone] as [String: Any]
+        let dict = ["email": _email, "password": _password, "firstname": _firstName, "name": _name, "zipcode": _zipcode, "country": _country, "type": _type] as [String: Any]
         do{
             let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
             
@@ -145,7 +145,7 @@ class APIManager {
         })
     }
     
-    func addAdvert(_title: String, _body: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
+    func addAdvert(_title: String, _body: String, _tags: String, onSuccess: @escaping(JSON) -> Void, onFailure: @escaping(Error) -> Void){
         guard let url = URL(string: baseURL + APIManager.addAdvertEndpoint) else {
             print("Error: cannot create URL")
             return
@@ -153,7 +153,7 @@ class APIManager {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         
-        let dict = ["title": _title, "body": _body, "pictures": ""] as [String: Any]
+        let dict = ["title": _title, "body": _body, "pictures": "", "tags": _tags] as [String: Any]
         do{
             let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
             

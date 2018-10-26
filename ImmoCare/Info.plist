@@ -27,6 +27,8 @@
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Calendrier requis</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Contacts requis</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Localisation requise</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

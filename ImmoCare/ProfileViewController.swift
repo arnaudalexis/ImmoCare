@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var descriptionView: UITextView!
     
     
@@ -24,10 +24,10 @@ class ProfileViewController: UIViewController {
         
         let user = User.sharedInstance
         
-        nameLabel.text = user.firstname + " " + user.name
+        nameLabel.text = user.firstname.capitalizingFirstLetter() + " " + user.name.capitalizingFirstLetter()
         cityLabel.text = user.city
         emailLabel.text = user.email
-        phoneLabel.text = user.phone
+        typeLabel.text = (user.type == 0 ? "Vacancier" : "Gardien")
         //setupMenuBar()
     }
     

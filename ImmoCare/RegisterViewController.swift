@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var realCityField: UITextField!
     
+    @IBOutlet weak var toggle: UISwitch!
     
     var contentViewController = ["vacancier", "bénévole", "auto-entrepreneur"]
 
@@ -25,6 +26,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
+        toggle.setOn(false, animated: false)
     }
     
 
@@ -91,7 +93,8 @@ class RegisterViewController: UIViewController {
             self.present(alertController, animated: true, completion:nil)
         }
         else{
-            APIManager.sharedInstance.registerUser(_email: emailField.text!, _password: passwordField.text!, _name: nameField.text!, _firstName: firstNameField.text!, _zipcode: cityField.text!, _country: "", _phone: phoneField.text!, onSuccess: { json in
+            let type = (toggle.isOn ? 1 : 0)
+            APIManager.sharedInstance.registerUser(_email: emailField.text!, _password: passwordField.text!, _name: nameField.text!, _firstName: firstNameField.text!, _zipcode: cityField.text!, _country: "", _type: type, onSuccess: { json in
                 if let string = json.rawString() {
                     print(string)
                 }

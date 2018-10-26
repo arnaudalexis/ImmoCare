@@ -31,6 +31,7 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
         let tags : String
         let idUser : String
         let username : String
+        let name : String
         let cp : String
         let ville : String
         let type : Int
@@ -41,7 +42,7 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var tableview: UITableView!
     
     var items = [Item]()
-    var images:Array = ["plante", "appart", "chien"]
+    var images:Array = ["plante", "appart", "chien", "chat"]
     var selBody:String = ""
     var selTitle:String = ""
     var selImage:UIImage = #imageLiteral(resourceName: "immocare")
@@ -51,23 +52,28 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     var selVille:String = ""
     var selType:Int = 0
     var selMail:String = ""
+    var selIdUser:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //self.tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "myCell")
 
+        requestData()
+    }
+    
+    func requestData(){
         APIManager.sharedInstance.listAdverts(onSuccess: { json in
             if let string = json.rawString() {
                 print(string)
             }
-                if(json["statusCode"] != 200){
-                    print("Error")
-                } else {
-                    print(json["result"])
-                    DispatchQueue.main.async(execute: {self.extract_json(json: json)})
-                    
-                }
+            if(json["statusCode"] != 200){
+                print("Error")
+            } else {
+                print(json["result"])
+                DispatchQueue.main.async(execute: {self.extract_json(json: json)})
+                
+            }
         }, onFailure: { error in
             DispatchQueue.main.async(execute: {
                 print("Error")
@@ -87,6 +93,7 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! MyTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         let item = items[indexPath.row]
         cell.cellTitleLabel?.text = item.title
         cell.cellDateLabel?.text = item.date
@@ -135,11 +142,12 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
                         print(self.items[indexPath.row].image)
                         self.selImage = UIImage(named: self.items[indexPath.row].image)!
                         self.selTags = item.tags
-                        self.selName = item.username
+                        self.selName = item.username + " " + item.name
                         self.selVille = item.ville
                         self.selCP = item.cp
                         self.selType = item.type
                         self.selMail = item.email
+                        self.selIdUser = Int(item.idUser) ?? 0
                         self.performSegue(withIdentifier: "DetailsAdvertCtrl", sender: self)
                     }
                 }
@@ -159,29 +167,38 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         
         let data_list = json["result"].arrayValue
-        
+        self.items = []
         print("an array")
         for aItem in data_list {
             
             let id = aItem["id"].stringValue
             let title = aItem["title"].stringValue
-            let date = aItem["creation_date"].stringValue
+            //let date = aItem["creation_date"].stringValue
+            let date = "2018/10/26"
             //let image = aItem["pictures"].stringValue
             
-            let number = Int(arc4random_uniform(3))
-            let image = images[number]
+//            let number = Int(arc4random_uniform(3))
+//            let image = images[number]
+            var image = "appart"
+            for img in images {
+                if aItem["tags"].stringValue.range(of:img) != nil {
+                    image = img
+                    break
+                }
+            }
             let tags = (aItem["tags"].stringValue.count > 0 ? aItem["tags"].stringValue : "Animal,Chez moi,Plante")
             let idUser = aItem["id_user"].stringValue
             APIManager.sharedInstance.getUserProfile(_id: idUser, onSuccess: { json in
                 if let string = json.rawString() {
                     print(string)
                 }
-                let firstname = json["result"]["firstname"].stringValue
+                let username = json["result"]["firstname"].stringValue.capitalizingFirstLetter()
+                let name = json["result"]["name"].stringValue.capitalizingFirstLetter()
                 let city = json["result"]["city"].stringValue
                 let cp = json["result"]["zipcode"].stringValue
                 let type = json["result"]["type"].intValue
                 let email = json["result"]["email"].stringValue
-                let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: firstname, cp: cp, ville: city, type: type, email: email)
+                let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: username, name: name, cp: cp, ville: city, type: type, email: email)
                 self.items.append(item)
                 print(item)
                 if(self.items.count == data_list.count){
@@ -189,7 +206,7 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
                 }
             }, onFailure: { error in
                 DispatchQueue.main.async(execute: {
-                    let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: "", cp: "", ville: "", type: 0, email: "")
+                    let item = Item(id: id, title: title, date: date, image: image, tags: tags, idUser: idUser, username: "", name: "", cp: "", ville: "", type: 0, email: "")
                     self.items.append(item)
                 })
             })
@@ -204,8 +221,12 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
     func do_table_refresh()
     {
         print("refresh")
-        self.tableview.reloadData()
+        DispatchQueue.main.async(execute: {self.tableview.reloadData()})
         
+    }
+    
+    @IBAction func refreshData(_ sender: Any) {
+        requestData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -221,6 +242,8 @@ class TableController: UIViewController, UITableViewDataSource, UITableViewDeleg
             vc?.name = selName
             vc?.cp = selCP
             vc?.email = selMail
+            vc?.type = (selType == 0 ? "Vacancier" : "Gardien" )
+            vc?.idUser = selIdUser
         }
     }
 
